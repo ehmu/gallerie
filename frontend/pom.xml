@@ -5,8 +5,8 @@
 	<artifactId>frontend</artifactId>
 
 	<parent>
-		<groupId>de.jonashackt</groupId>
-		<artifactId>spring-boot-vuejs</artifactId>
+		<groupId>de.trick.gallerie</groupId>
+		<artifactId>trick-gallerie</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

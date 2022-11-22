@@ -1,6 +1,6 @@
-package de.jonashackt.springbootvuejs.configuration;
+package de.trick.gallerie.configuration;
 
-import de.jonashackt.springbootvuejs.SpringBootVuejsApplication;
+import de.trick.gallerie.SpringBootVuejsApplication;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;

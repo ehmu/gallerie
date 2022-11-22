@@ -1,8 +1,8 @@
-package de.jonashackt.springbootvuejs.controller;
+package de.trick.gallerie.controller;
 
-import de.jonashackt.springbootvuejs.domain.User;
-import de.jonashackt.springbootvuejs.exception.UserNotFoundException;
-import de.jonashackt.springbootvuejs.repository.UserRepository;
+import de.trick.gallerie.domain.User;
+import de.trick.gallerie.exception.UserNotFoundException;
+import de.trick.gallerie.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

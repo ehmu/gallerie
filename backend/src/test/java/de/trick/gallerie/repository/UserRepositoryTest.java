@@ -1,6 +1,6 @@
-package de.jonashackt.springbootvuejs.repository;
+package de.trick.gallerie.repository;
 
-import de.jonashackt.springbootvuejs.domain.User;
+import de.trick.gallerie.domain.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

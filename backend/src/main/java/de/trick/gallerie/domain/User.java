@@ -1,4 +1,4 @@
-package de.jonashackt.springbootvuejs.domain;
+package de.trick.gallerie.domain;
 
 import javax.persistence.*;
 
