@@ -1,6 +1,6 @@
 package de.trick.gallerie.configuration;
 
-import de.trick.gallerie.SpringBootVuejsApplication;
+import de.trick.gallerie.SpringBootGallerieApplication;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -14,7 +14,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import static org.hamcrest.Matchers.containsString;
 
 @SpringBootTest(
-        classes = SpringBootVuejsApplication.class,
+        classes = SpringBootGallerieApplication.class,
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 class SpaRedirectTest {

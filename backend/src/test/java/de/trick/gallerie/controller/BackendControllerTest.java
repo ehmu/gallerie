@@ -1,6 +1,6 @@
 package de.trick.gallerie.controller;
 
-import de.trick.gallerie.SpringBootVuejsApplication;
+import de.trick.gallerie.SpringBootGallerieApplication;
 import de.trick.gallerie.domain.User;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
 @SpringBootTest(
-		classes = SpringBootVuejsApplication.class,
+		classes = SpringBootGallerieApplication.class,
 		webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 public class BackendControllerTest {
