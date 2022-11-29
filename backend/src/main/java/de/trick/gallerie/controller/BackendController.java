@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,10 +31,10 @@ public class BackendController {
     }
 
     @ResponseBody
-    @RequestMapping(path = "/user/{lastName}/{firstName}", method = RequestMethod.POST)
+    @RequestMapping(path = "/user/{firstName}/{lastName}", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public long addNewUser (@PathVariable("lastName") String lastName, @PathVariable("firstName") String firstName) {
-        User savedUser = userRepository.save(new User(firstName, lastName));
+    public long addNewUser (@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
+        User savedUser = userRepository.save(new User(firstName, lastName, firstName, lastName));
 
         LOG.info(savedUser.toString() + " successfully saved into DB");
 
@@ -51,6 +52,7 @@ public class BackendController {
     }
 
     @ResponseBody
+    //@Secured("ADMIN")
     @RequestMapping(path="/secured", method = RequestMethod.GET)
     public String getSecured() {
         LOG.info("GET successfully called on /secured resource");
