@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <h1>Create User12</h1>
+    <h1>Create User</h1>
 
     <h3>Just some database interaction...</h3>
 
