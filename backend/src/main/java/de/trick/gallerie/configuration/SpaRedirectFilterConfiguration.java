@@ -36,7 +36,7 @@ public class SpaRedirectFilterConfiguration {
             private Pattern pattern = Pattern.compile(REGEX);
             @Override
             protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
-                if (pattern.matcher(req.getRequestURI()).matches() && !req.getRequestURI().equals("/")) {
+                /*if (pattern.matcher(req.getRequestURI()).matches() && !req.getRequestURI().equals("/")) {
                     // Delegate/Forward to `/` if `pattern` matches and it is not `/`
                     // Required because of 'mode: history'usage in frontend routing, see README for further details
                     LOGGER.info("URL {} entered directly into the Browser, redirecting...", req.getRequestURI());
@@ -44,7 +44,8 @@ public class SpaRedirectFilterConfiguration {
                     rd.forward(req, res);
                 } else {
                     chain.doFilter(req, res);
-                }
+                }*/
+                chain.doFilter(req, res);
             }
         };
     }
