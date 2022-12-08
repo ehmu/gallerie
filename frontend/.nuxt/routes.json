@@ -3,224 +3,192 @@
     "name": "shop",
     "path": "/shop",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/index.vue",
-    "chunkName": "pages/shop/index",
-    "_name": "_0d1f80d6"
+    "chunkName": "pages/shop/index"
   },
   {
     "name": "pages-about-us",
     "path": "/pages/about-us",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/about-us.vue",
-    "chunkName": "pages/pages/about-us",
-    "_name": "_5e58f7e5"
+    "chunkName": "pages/pages/about-us"
   },
   {
     "name": "pages-account",
     "path": "/pages/account",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/account.vue",
-    "chunkName": "pages/pages/account",
-    "_name": "_9747c614"
+    "chunkName": "pages/pages/account"
   },
   {
     "name": "pages-blog",
     "path": "/pages/blog",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/blog.vue",
-    "chunkName": "pages/pages/blog",
-    "_name": "_4fa66829"
+    "chunkName": "pages/pages/blog"
   },
   {
     "name": "pages-cart",
     "path": "/pages/cart",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/cart.vue",
-    "chunkName": "pages/pages/cart",
-    "_name": "_7778c4a7"
+    "chunkName": "pages/pages/cart"
   },
   {
     "name": "pages-checkout",
     "path": "/pages/checkout",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/checkout.vue",
-    "chunkName": "pages/pages/checkout",
-    "_name": "_202df766"
+    "chunkName": "pages/pages/checkout"
   },
   {
     "name": "pages-contact-us",
     "path": "/pages/contact-us",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/contact-us.vue",
-    "chunkName": "pages/pages/contact-us",
-    "_name": "_2ecb9c32"
+    "chunkName": "pages/pages/contact-us"
   },
   {
     "name": "pages-forgot-password",
     "path": "/pages/forgot-password",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/forgot-password.vue",
-    "chunkName": "pages/pages/forgot-password",
-    "_name": "_7a5ed7ce"
+    "chunkName": "pages/pages/forgot-password"
   },
   {
     "name": "pages-login",
     "path": "/pages/login",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/login.vue",
-    "chunkName": "pages/pages/login",
-    "_name": "_07137c72"
+    "chunkName": "pages/pages/login"
   },
   {
     "name": "pages-wishlist",
     "path": "/pages/wishlist",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/wishlist.vue",
-    "chunkName": "pages/pages/wishlist",
-    "_name": "_f1c9d568"
+    "chunkName": "pages/pages/wishlist"
   },
   {
     "name": "shop-boxed-image",
     "path": "/shop/boxed-image",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/boxed-image.vue",
-    "chunkName": "pages/shop/boxed-image",
-    "_name": "_2c45a0fb"
+    "chunkName": "pages/shop/boxed-image"
   },
   {
     "name": "shop-boxed-slider",
     "path": "/shop/boxed-slider",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/boxed-slider.vue",
-    "chunkName": "pages/shop/boxed-slider",
-    "_name": "_12068d1e"
+    "chunkName": "pages/shop/boxed-slider"
   },
   {
     "name": "shop-horizontal-filter-1",
     "path": "/shop/horizontal-filter-1",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/horizontal-filter-1.vue",
-    "chunkName": "pages/shop/horizontal-filter-1",
-    "_name": "_989d7eb0"
+    "chunkName": "pages/shop/horizontal-filter-1"
   },
   {
     "name": "shop-horizontal-filter-2",
     "path": "/shop/horizontal-filter-2",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/horizontal-filter-2.vue",
-    "chunkName": "pages/shop/horizontal-filter-2",
-    "_name": "_98814fae"
+    "chunkName": "pages/shop/horizontal-filter-2"
   },
   {
     "name": "shop-infinite-scroll",
     "path": "/shop/infinite-scroll",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/infinite-scroll.vue",
-    "chunkName": "pages/shop/infinite-scroll",
-    "_name": "_a92a08ae"
+    "chunkName": "pages/shop/infinite-scroll"
   },
   {
     "name": "shop-list",
     "path": "/shop/list",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/list.vue",
-    "chunkName": "pages/shop/list",
-    "_name": "_233a14aa"
+    "chunkName": "pages/shop/list"
   },
   {
     "name": "shop-off-canvas",
     "path": "/shop/off-canvas",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/off-canvas.vue",
-    "chunkName": "pages/shop/off-canvas",
-    "_name": "_94af167a"
+    "chunkName": "pages/shop/off-canvas"
   },
   {
     "name": "shop-right-sidebar",
     "path": "/shop/right-sidebar",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/right-sidebar.vue",
-    "chunkName": "pages/shop/right-sidebar",
-    "_name": "_2d9bfbee"
+    "chunkName": "pages/shop/right-sidebar"
   },
   {
     "name": "pages-single-slug",
     "path": "/pages/single/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/single/_slug.vue",
-    "chunkName": "pages/pages/single/_slug",
-    "_name": "_5dcbd80a"
+    "chunkName": "pages/pages/single/_slug"
   },
   {
     "name": "product-center-slug",
     "path": "/product/center/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/center/_slug.vue",
-    "chunkName": "pages/product/center/_slug",
-    "_name": "_e43e7de8"
+    "chunkName": "pages/product/center/_slug"
   },
   {
     "name": "product-extended-slug",
     "path": "/product/extended/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/extended/_slug.vue",
-    "chunkName": "pages/product/extended/_slug",
-    "_name": "_50e84820"
+    "chunkName": "pages/product/extended/_slug"
   },
   {
     "name": "product-fullwidth-slug",
     "path": "/product/fullwidth/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/fullwidth/_slug.vue",
-    "chunkName": "pages/product/fullwidth/_slug",
-    "_name": "_37f9ea06"
+    "chunkName": "pages/product/fullwidth/_slug"
   },
   {
     "name": "product-grid-slug",
     "path": "/product/grid/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/grid/_slug.vue",
-    "chunkName": "pages/product/grid/_slug",
-    "_name": "_7b703fbd"
+    "chunkName": "pages/product/grid/_slug"
   },
   {
     "name": "product-left-sidebar-slug",
     "path": "/product/left-sidebar/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/left-sidebar/_slug.vue",
-    "chunkName": "pages/product/left-sidebar/_slug",
-    "_name": "_de4a77e6"
+    "chunkName": "pages/product/left-sidebar/_slug"
   },
   {
     "name": "product-right-sidebar-slug",
     "path": "/product/right-sidebar/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/right-sidebar/_slug.vue",
-    "chunkName": "pages/product/right-sidebar/_slug",
-    "_name": "_647a49cc"
+    "chunkName": "pages/product/right-sidebar/_slug"
   },
   {
     "name": "product-sticky-both-slug",
     "path": "/product/sticky-both/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/sticky-both/_slug.vue",
-    "chunkName": "pages/product/sticky-both/_slug",
-    "_name": "_71e73c58"
+    "chunkName": "pages/product/sticky-both/_slug"
   },
   {
     "name": "product-sticky-cart-slug",
     "path": "/product/sticky-cart/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/sticky-cart/_slug.vue",
-    "chunkName": "pages/product/sticky-cart/_slug",
-    "_name": "_edd6329a"
+    "chunkName": "pages/product/sticky-cart/_slug"
   },
   {
     "name": "product-sticky-info-slug",
     "path": "/product/sticky-info/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/sticky-info/_slug.vue",
-    "chunkName": "pages/product/sticky-info/_slug",
-    "_name": "_a7b8927e"
+    "chunkName": "pages/product/sticky-info/_slug"
   },
   {
     "name": "product-transparent-slug",
     "path": "/product/transparent/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/transparent/_slug.vue",
-    "chunkName": "pages/product/transparent/_slug",
-    "_name": "_7a5fe601"
+    "chunkName": "pages/product/transparent/_slug"
   },
   {
     "name": "shop-grid-type",
     "path": "/shop/grid/:type?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/shop/grid/_type.vue",
-    "chunkName": "pages/shop/grid/_type",
-    "_name": "_486f1c5d"
+    "chunkName": "pages/shop/grid/_type"
   },
   {
     "name": "product-type-slug",
     "path": "/product/:type?/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/_type/_slug.vue",
-    "chunkName": "pages/product/_type/_slug",
-    "_name": "_47127908"
+    "chunkName": "pages/product/_type/_slug"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_11df5234"
+    "chunkName": "pages/index"
   }
 ]

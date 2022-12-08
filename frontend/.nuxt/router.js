@@ -43,7 +43,7 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: '/vue/porto/demo-3/',
+  base: '/',
   linkActiveClass: '',
   linkExactActiveClass: 'active',
   scrollBehavior,
