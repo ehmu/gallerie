@@ -62,7 +62,7 @@ export default {
 		}
 	},
 	mounted: function() {
-		Api.get(`${baseUrl}/demo3`)
+		Api.get(`${baseUrl}/api/hello`)
 			.then(response => {
 				this.products = response.data.products;
 				this.posts = response.data.posts;
