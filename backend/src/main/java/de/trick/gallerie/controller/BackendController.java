@@ -1,13 +1,12 @@
 package de.trick.gallerie.controller;
 
-import de.trick.gallerie.domain.User;
+import de.trick.gallerie.entity.User;
 import de.trick.gallerie.exception.UserNotFoundException;
 import de.trick.gallerie.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

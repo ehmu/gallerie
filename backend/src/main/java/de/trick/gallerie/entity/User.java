@@ -1,4 +1,4 @@
-package de.trick.gallerie.domain;
+package de.trick.gallerie.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

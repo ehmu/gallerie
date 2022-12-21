@@ -1,4 +1,4 @@
-package de.trick.gallerie.domain;
+package de.trick.gallerie.entity;
 
 import javax.persistence.*;
 

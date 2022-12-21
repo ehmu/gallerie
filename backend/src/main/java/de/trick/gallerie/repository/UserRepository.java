@@ -1,7 +1,7 @@
 package de.trick.gallerie.repository;
 
 
-import de.trick.gallerie.domain.User;
+import de.trick.gallerie.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 

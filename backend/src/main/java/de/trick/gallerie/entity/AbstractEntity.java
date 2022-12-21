@@ -1,13 +1,14 @@
-package de.trick.gallerie.domain;
+package de.trick.gallerie.entity;
 
 import javax.persistence.*;
 import java.util.UUID;
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(columnDefinition = "VARCHAR(64)")
