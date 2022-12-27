@@ -4,14 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Entity-Klasse für Adressen
- *
- * User: dehmann
- * Date: 02.02.15
- * Time: 16:28
- * To change this template use File | Settings | File Templates.
- */
+
 @Entity
 @Table(name = "gallerie")
 public class Gallerie extends AbstractEntity{
@@ -20,9 +13,15 @@ public class Gallerie extends AbstractEntity{
 
     private String description;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @CollectionTable(name = "gallerie_dokumente", joinColumns = @JoinColumn(name = "gallerie_id"))
-    private Set<Dokument> dokumente = new HashSet<>();
+    @Column(columnDefinition = "boolean default false")
+    private boolean active;
+
+    private String mainImageUuid;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "gallerie_images", joinColumns = @JoinColumn(name = "gallerie_id"))
+    @Column(name = "image_uuid")
+    private Set<String> imageUuids = new HashSet<>();
 
     public String getName() {
         return name;
@@ -40,11 +39,27 @@ public class Gallerie extends AbstractEntity{
         this.description = description;
     }
 
-    public Set<Dokument> getDokumente() {
-        return dokumente;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setDokumente(Set<Dokument> dokumente) {
-        this.dokumente = dokumente;
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getMainImageUuid() {
+        return mainImageUuid;
+    }
+
+    public void setMainImageUuid(String mainImageUuid) {
+        this.mainImageUuid = mainImageUuid;
+    }
+
+    public Set<String> getImageUuids() {
+        return imageUuids;
+    }
+
+    public void setImageUuids(Set<String> imageUuids) {
+        this.imageUuids = imageUuids;
     }
 }

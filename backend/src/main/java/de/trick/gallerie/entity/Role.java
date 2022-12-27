@@ -2,14 +2,7 @@ package de.trick.gallerie.entity;
 
 import javax.persistence.*;
 
-/**
- * Entity-Klasse für Adressen
- *
- * User: dehmann
- * Date: 02.02.15
- * Time: 16:28
- * To change this template use File | Settings | File Templates.
- */
+
 @Entity
 @Table(name = "role")
 public class Role extends AbstractEntity{

@@ -24,7 +24,7 @@ import java.util.Set;
 
 
 
-@Controller
+@RestController
 @RequestMapping(value = "/api/dokumente")
 public class DokumenteController{
 
@@ -43,7 +43,6 @@ public class DokumenteController{
      * @param modelMap
      * @return
      */
-    @ResponseBody
     @RequestMapping(value = "/uploadDokument", method = RequestMethod.POST)
     @Transactional
     public ResponseEntity<?> uploadDokument(@RequestParam("objectUuid") String objectUuid, @RequestParam("objectClass") String objectClass, @RequestParam(value = "dokumentType", required = false)DokumentType dokumentType, @RequestParam("file") MultipartFile file, ModelMap modelMap) {
@@ -81,7 +80,6 @@ public class DokumenteController{
      * @param uuid UUID des zu l�schenden Dokuments
      * @return
      */
-    @ResponseBody
     @RequestMapping(value = "/deleteDokument", method = RequestMethod.GET)
     @Transactional
     public ResponseEntity<?> deleteDokument(@RequestParam("objectUuid") String objectUuid, @RequestParam("objectClass") String objectClass, @RequestParam("uuid") String uuid) {
