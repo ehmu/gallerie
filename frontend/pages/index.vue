@@ -82,7 +82,7 @@ export default {
 			})
 			.catch(error => ({ error: JSON.stringify(error) }));
 
-		this.timerId = setTimeout(() => {
+		/*this.timerId = setTimeout(() => {
 			if (
 				this.$route.path === '/' &&
 				getCookie('newsletter') !== 'false'
@@ -99,7 +99,7 @@ export default {
 					}
 				);
 			}
-		}, 10000);
+		}, 10000);*/
 	},
 	destroyed: function() {
 		clearTimeout(this.timerId);

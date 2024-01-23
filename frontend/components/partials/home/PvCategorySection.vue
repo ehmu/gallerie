@@ -22,7 +22,7 @@
 						/>
 					</figure>
 					<div class="category-content">
-						<h3>Sunglasses</h3>
+						<h3>Sunglasses1</h3>
 						<span>
 							<mark class="count">8</mark> products
 						</span>
