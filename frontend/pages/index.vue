@@ -62,7 +62,7 @@ export default {
 		}
 	},
 	mounted: function() {
-		Api.get(`${baseUrl}/api/hello`)
+		Api.get(`${baseUrl}`)
 			.then(response => {
 				this.products = response.data.products;
 				this.posts = response.data.posts;
@@ -82,24 +82,6 @@ export default {
 			})
 			.catch(error => ({ error: JSON.stringify(error) }));
 
-		/*this.timerId = setTimeout(() => {
-			if (
-				this.$route.path === '/' &&
-				getCookie('newsletter') !== 'false'
-			) {
-				this.$modal.show(
-					() =>
-						import('~/components/features/modal/PvNewsletterModal'),
-					{},
-					{
-						width: '740',
-						height: 'auto',
-						adaptive: true,
-						class: 'newsletter-modal'
-					}
-				);
-			}
-		}, 10000);*/
 	},
 	destroyed: function() {
 		clearTimeout(this.timerId);

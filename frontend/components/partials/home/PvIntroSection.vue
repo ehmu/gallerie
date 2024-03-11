@@ -20,7 +20,7 @@
 				v-animate
 			>
 				<h2>Winter Fashion Trends</h2>
-				<h3 class="text-uppercase mb-0">Get up to 50% off</h3>
+				<h3 class="text-uppercase mb-0">Get up to 30% off</h3>
 				<h4 class="m-b-4">on Jackets</h4>
 
 				<h5 class="text-uppercase">

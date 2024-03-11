@@ -126,6 +126,13 @@
     "_name": "_2d9bfbee"
   },
   {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/dedi/workspaces/gallerie/frontend/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_11df5234"
+  },
+  {
     "name": "pages-single-slug",
     "path": "/pages/single/:slug?",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/single/_slug.vue",
@@ -215,12 +222,5 @@
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/product/_type/_slug.vue",
     "chunkName": "pages/product/_type/_slug",
     "_name": "_47127908"
-  },
-  {
-    "name": "index",
-    "path": "/",
-    "component": "/Users/dedi/workspaces/gallerie/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_11df5234"
   }
 ]

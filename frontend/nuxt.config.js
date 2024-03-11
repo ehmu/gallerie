@@ -1,7 +1,4 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
     head: {
         titleTemplate: 'Porto - Multi-purpose Ecomerce template with Vue.js',
         title: 'Porto - Multi-purpose Ecomerce template with Vue.js',
@@ -113,13 +110,13 @@ export default {
     modules: [ '@nuxtjs/axios' ],
 
     router: {
-        //base: '/vue/porto/demo-3/',
+        base: '/',
         linkActiveClass: '',
         linkExactActiveClass: 'active'
     },
 
     build: {
-        //publicPath: "http://d-themes.com/vue/porto/demo-3/"
+        publicPath: "http://localhost:8080/"
     },
 
     generate: {
@@ -137,5 +134,4 @@ export default {
         port: 4000,
         host: 'localhost'
     }
-
 };

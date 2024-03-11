@@ -22,6 +22,7 @@ const _a92a08ae = () => interopDefault(import('../pages/shop/infinite-scroll.vue
 const _233a14aa = () => interopDefault(import('../pages/shop/list.vue' /* webpackChunkName: "pages/shop/list" */))
 const _94af167a = () => interopDefault(import('../pages/shop/off-canvas.vue' /* webpackChunkName: "pages/shop/off-canvas" */))
 const _2d9bfbee = () => interopDefault(import('../pages/shop/right-sidebar.vue' /* webpackChunkName: "pages/shop/right-sidebar" */))
+const _11df5234 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _5dcbd80a = () => interopDefault(import('../pages/pages/single/_slug.vue' /* webpackChunkName: "pages/pages/single/_slug" */))
 const _e43e7de8 = () => interopDefault(import('../pages/product/center/_slug.vue' /* webpackChunkName: "pages/product/center/_slug" */))
 const _50e84820 = () => interopDefault(import('../pages/product/extended/_slug.vue' /* webpackChunkName: "pages/product/extended/_slug" */))
@@ -35,7 +36,6 @@ const _a7b8927e = () => interopDefault(import('../pages/product/sticky-info/_slu
 const _7a5fe601 = () => interopDefault(import('../pages/product/transparent/_slug.vue' /* webpackChunkName: "pages/product/transparent/_slug" */))
 const _486f1c5d = () => interopDefault(import('../pages/shop/grid/_type.vue' /* webpackChunkName: "pages/shop/grid/_type" */))
 const _47127908 = () => interopDefault(import('../pages/product/_type/_slug.vue' /* webpackChunkName: "pages/product/_type/_slug" */))
-const _11df5234 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -121,6 +121,10 @@ export const routerOptions = {
     component: _2d9bfbee,
     name: "shop-right-sidebar"
   }, {
+    path: "/",
+    component: _11df5234,
+    name: "index"
+  }, {
     path: "/pages/single/:slug?",
     component: _5dcbd80a,
     name: "pages-single-slug"
@@ -172,10 +176,6 @@ export const routerOptions = {
     path: "/product/:type?/:slug?",
     component: _47127908,
     name: "product-type-slug"
-  }, {
-    path: "/",
-    component: _11df5234,
-    name: "index"
   }],
 
   fallback: false

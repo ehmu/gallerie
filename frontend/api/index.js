@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseDonmain = 'http://localhost:8080';
+const baseDonmain = 'http://localhost:3000';
 
 export const customHeader = {
     'Content-Type': 'application/json',
@@ -8,7 +8,7 @@ export const customHeader = {
 };
 
 export const baseUrl = `${ baseDonmain }`;
-export const currentDemo = 5;
+export const currentDemo = 3;
 
 export default axios.create( {
     baseUrl,
