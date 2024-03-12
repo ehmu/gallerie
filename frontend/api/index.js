@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseDonmain = 'http://localhost:3000';
+const baseDonmain = 'http://localhost:8080/api';
 
 export const customHeader = {
     'Content-Type': 'application/json',

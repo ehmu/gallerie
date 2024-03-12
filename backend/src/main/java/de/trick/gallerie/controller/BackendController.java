@@ -23,9 +23,9 @@ public class BackendController {
     private UserRepository userRepository;
 
     @ResponseBody
-    @RequestMapping(path = "/hello")
+    @RequestMapping(path = "/")
     public String sayHello() {
-        LOG.info("GET called on /hello resource");
+        LOG.info("GET called on /api resource");
         return HELLO_TEXT;
     }
 
