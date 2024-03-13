@@ -132,6 +132,6 @@ export default {
 
     server: {
         port: 4000,
-        host: 'localhost'
+        host: '192.168.178.21'
     }
 };

@@ -1,6 +1,6 @@
 <template>
 	<section class="container">
-		<h2 class="section-title ls-n-15 text-center pt-2 m-b-4">Gallierien</h2>
+		<h2 class="section-title ls-n-15 text-center pt-2 m-b-4">Alle Gallerien</h2>
 
 		<pv-carousel
 			class="nav-image-center show-nav-hover nav-outer cats-slider appear-animate"

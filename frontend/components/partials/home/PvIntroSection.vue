@@ -6,7 +6,7 @@
     v-animate v-if="gallerien && gallerien.length > 0"
   >
 
-    <div v-for="(gallerie, index) in gallerien" :key="gallerie.id" class="home-slide home-slide1 banner d-flex align-items-center swiper-slide">
+    <div v-for="(gallerie, index) in gallerien" :key="gallerie.id" class="home-slide home-slide2 banner d-flex align-items-center swiper-slide">
       <img
         class="slide-bg"
         :src="baseUrl + '/dokumente/downloadDokument/' + gallerie.mainImageUuid"
@@ -21,20 +21,20 @@
         data-animation-name="fadeInUpShorter"
         v-animate
       >
-        <h2>Winter Fashion Trends</h2>
-        <h3 class="text-uppercase mb-0">Get up to 30% off</h3>
-        <h4 class="m-b-4">on Jackets</h4>
+        <h2>{{gallerie.name}}</h2>
+        <h3 class="text-uppercase mb-0">{{gallerie.description}}</h3>
+        <h4 class="m-b-4">{{gallerie.name}}</h4>
 
         <h5 class="text-uppercase">
           Starting at<span class="coupon-sale-text">
-						<sup>$</sup>199<sup>99</sup>
+						{{gallerie.description}}
 					</span>
         </h5>
         <nuxt-link
           to="/shop"
           class="btn btn-dark btn-xl"
           role="button"
-        >Shop Now</nuxt-link>
+        >Mehr anzeigen</nuxt-link>
       </div>
     </div>
 
