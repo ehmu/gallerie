@@ -1,6 +1,8 @@
 <template>
 	<main class="main home">
-		<pv-intro-section></pv-intro-section>
+		<pv-intro-section
+      :gallerien="gallerien"
+    ></pv-intro-section>
 
 		<pv-category-section
       :gallerien="gallerien"
@@ -11,15 +13,8 @@
 
 <script>
 import PvIntroSection from '~/components/partials/home/PvIntroSection';
-import PvBannerSection from '~/components/partials/home/PvBannerSection';
-import PvPopularCollection from '~/components/partials/home/PvPopularCollection';
 import PvCategorySection from '~/components/partials/home/PvCategorySection';
 
-import {
-	getProductsByAttri,
-	getTopSellingProducts,
-	getTopRatedProducts
-} from '~/utils/service';
 import { getCookie } from '~/utils';
 import Api, { baseUrl } from '~/api';
 

@@ -8,14 +8,14 @@
 			data-animation-name="fadeInUpShorter"
 			data-animation-delay="200"
 			data-animation-duration="1000"
-			v-animate
+			v-animate v-if="gallerien && gallerien.length > 0"
 		>
 
-			<div v-for="gallerie in gallerien" class="product-category mb-0 swiper-slide">
+			<div v-for="gallerie in gallerien" class="product-category mb-0 swiper-slide" v-if="gallerien && gallerien.length > 0">
 				<nuxt-link to="/shop">
 					<figure>
 						<img
-							v-lazy="baseUrl + '/dokumente/downloadDokument/' + gallerie.mainImageUuid"
+              v-lazy="baseUrl + '/dokumente/downloadDokument/' + gallerie.mainImageUuid"
 							alt="category"
 							width="273"
 							height="273"
@@ -44,7 +44,7 @@ export default {
 		PvCarousel
 	},
   props: {
-    gallerien: Object
+    gallerien: []
   },
 	data: function() {
 		return {
