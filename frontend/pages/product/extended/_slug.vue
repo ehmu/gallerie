@@ -57,21 +57,7 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<pv-desc-one
-				:product="product"
-				v-if="product"
-			></pv-desc-one>
 
-			<pv-related-products :products="relatedProducts"></pv-related-products>
-
-			<pv-small-collection
-				:featured-products="featuredProducts"
-				:best-products="bestProducts"
-				:latest-products="latestProducts"
-				:top-rated-products="topRatedProducts"
-			></pv-small-collection>
-		</div>
 	</main>
 </template>
 

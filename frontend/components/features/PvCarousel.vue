@@ -64,7 +64,7 @@ export default {
 				self.$refs.pvCarousel.swiper.emit( 'update' );
 				self.isNavDisabled = self.$refs.pvCarousel.querySelectorAll( '.swiper-button-disabled' ) && self.$refs.pvCarousel.querySelectorAll( '.swiper-button-disabled' ).length > 1 ? true : false;
 				self.isDotDisabled = self.$refs.pvCarousel.querySelectorAll( '.swiper-pagination-bullet' ) && self.$refs.pvCarousel.querySelectorAll( '.swiper-pagination-bullet' ).length < 2 ? true : false;
-	
+
 				if ( self.options.navigation && document.querySelector( self.options.navigation.nextEl ).parentNode.querySelectorAll( '.swiper-button-disabled' ).length > 1 ) {
 					document.querySelector( self.options.navigation.nextEl ).parentNode.classList.add( 'disabled' );
 				}

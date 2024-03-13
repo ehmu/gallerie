@@ -57,6 +57,6 @@ function handler( el ) {
         if ( !el.classList.contains( 'last-image' ) && !el.classList.contains( 'vue-lb-modal-image' ) ) {
             el.setAttribute( 'style', 'animation-duration: .3s; animation-delay: 0s' );
         }
-        window.clearInterval( interval );
+        //window.clearInterval( interval );
     }, { once: true } )
 }

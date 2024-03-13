@@ -2,14 +2,10 @@
 	<main class="main home">
 		<pv-intro-section></pv-intro-section>
 
-		<pv-category-section></pv-category-section>
+		<pv-category-section
+      :gallerien="gallerien"
+    ></pv-category-section>
 
-		<pv-banner-section></pv-banner-section>
-
-		<pv-popular-collection
-			:products="products.slice(0, 12)"
-			v-if="products"
-		></pv-popular-collection>
 	</main>
 </template>
 
@@ -30,55 +26,23 @@ import Api, { baseUrl } from '~/api';
 export default {
 	components: {
 		PvIntroSection,
-		PvBannerSection,
-		PvPopularCollection,
 		PvCategorySection
 	},
 	data: function() {
 		return {
-			products: [],
-			posts: [],
-			featuredProducts: [],
-			newProducts: [],
-			bestProducts: [],
-			topRatedProducts: []
+		  gallerien: [],
+			posts: []
 		};
 	},
-	computed: {
-		lightBoxMedia: function() {
-			let pictures = [];
-			for (let i = 0; i < this.posts.length; i++) {
-				pictures.push(this.posts[i].picture[0]);
-			}
-			return pictures.reduce((acc, cur) => {
-				return [
-					...acc,
-					{
-						src: `${baseUrl}${cur.url}`,
-						thumb: `${baseUrl}${cur.url}`
-					}
-				];
-			}, []);
-		}
-	},
+
+
+
 	mounted: function() {
-		Api.get(`${baseUrl}`)
+		Api.get(`${baseUrl}/gallerie/gallerien?onlyActive=true`)
 			.then(response => {
-				this.products = response.data.products;
+				this.gallerien = response.data.gallerien;
 				this.posts = response.data.posts;
-				this.featuredProducts = getProductsByAttri(
-					response.data.products
-				);
-				this.newProducts = getProductsByAttri(
-					response.data.products,
-					'is_new'
-				);
-				this.bestProducts = getTopSellingProducts(
-					response.data.products
-				);
-				this.topRatedProducts = getTopRatedProducts(
-					response.data.products
-				);
+
 			})
 			.catch(error => ({ error: JSON.stringify(error) }));
 
