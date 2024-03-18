@@ -6,7 +6,7 @@
     v-animate v-if="gallerien && gallerien.length > 0"
   >
 
-    <div v-for="(gallerie, index) in gallerien" :key="gallerie.id" class="home-slide home-slide2 banner d-flex align-items-center swiper-slide">
+    <div v-for="(gallerie, index) in gallerien" :key="gallerie.id" class="home-slide home-slide1 banner d-flex align-items-center swiper-slide">
       <img
         class="slide-bg"
         :src="baseUrl + '/dokumente/downloadDokument/' + gallerie.mainImageUuid"

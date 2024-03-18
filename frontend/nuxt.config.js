@@ -1,7 +1,7 @@
 export default {
     head: {
-        titleTemplate: 'Porto - Multi-purpose Ecomerce template with Vue.js',
-        title: 'Porto - Multi-purpose Ecomerce template with Vue.js',
+        titleTemplate: 'Trick-Manufaktur',
+        title: 'Trick-Manufaktur',
         meta: [
             { charset: 'utf-8' },
             {
@@ -12,23 +12,23 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Porto - Multi-purpose eCommerce Vue Template'
+                    'Trick-Manufaktur'
             },
             {
                 name: 'author',
-                content: 'd-themes'
+                content: 'Trick-Manufaktur'
             },
             {
                 name: 'keywords',
-                content: 'Porto Vue eCommerce Template'
+                content: 'Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln'
             },
             {
                 name: 'app-mobile-web-app-title',
-                content: 'Porto'
+                content: 'Trick-Manufaktur'
             },
             {
                 name: 'application-name',
-                content: 'Porto Vue eCommerce Template',
+                content: 'Trick-Manufaktur',
             },
             {
                 name: 'msapplication-TileColor',
