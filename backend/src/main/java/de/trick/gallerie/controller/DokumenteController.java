@@ -37,7 +37,7 @@ public class DokumenteController{
     /**
      * Speichert ein Dokument in der Datenbank und ordnet es der Entity zu. WICHTIG: Die Entity muss ein 'Set<Dokument> dokumente' haben
      * @param objectUuid Die UUID der Entity die die Dokumente beinhaltet
-     * @param objectClass Voll qualifizierter Klassenname (z.B. Gallerie)
+     * @param objectClass Voll qualifizierter Klassenname (z.B. Category)
      * @param dokumentType DokumentType (IMAGE, PDF)
      * @param file
      * @param modelMap
@@ -76,7 +76,7 @@ public class DokumenteController{
     /**
      * L�scht ein Dokument aus der Datenbank und entfernt es aus der Entity zu. WICHTIG: Die Entity muss ein 'Set<Dokument> dokumente' haben
      * @param objectUuid Die UUID der Entity die die Dokumente beinhaltet
-     * @param objectClass Voll qualifizierter Klassenname (z.B. Gallerie)
+     * @param objectClass Voll qualifizierter Klassenname (z.B. Category)
      * @param uuid UUID des zu l�schenden Dokuments
      * @return
      */

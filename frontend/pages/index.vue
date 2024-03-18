@@ -1,11 +1,11 @@
 <template>
 	<main class="main home">
 		<pv-intro-section
-      :gallerien="gallerien"
+      :categories="categories"
     ></pv-intro-section>
 
 		<pv-category-section
-      :gallerien="gallerien"
+      :categories="categories"
     ></pv-category-section>
 
 	</main>
@@ -25,7 +25,7 @@ export default {
 	},
 	data: function() {
 		return {
-		  gallerien: [],
+      categories: [],
 			posts: []
 		};
 	},
@@ -33,9 +33,9 @@ export default {
 
 
 	mounted: function() {
-		Api.get(`${baseUrl}/gallerie/gallerien?onlyActive=true`)
+		Api.get(`${baseUrl}/categories?onlyActive=true`)
 			.then(response => {
-				this.gallerien = response.data.gallerien;
+				this.categories = response.data.categories;
 				this.posts = response.data.posts;
 
 			})
