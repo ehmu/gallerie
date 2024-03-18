@@ -12,7 +12,7 @@
 		>
 
 			<div v-for="category in categories" class="product-category mb-0 swiper-slide" v-if="categories && categories.length > 0">
-				<nuxt-link to="/shop">
+				<nuxt-link :to="'/shop?categoryUUID=' + category.uuid">
 					<figure>
 						<img
               v-lazy="baseUrl + '/dokumente/downloadDokument/' + category.products[0].imageUuids[0]"

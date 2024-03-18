@@ -4,43 +4,19 @@
 			aria-label="breadcrumb"
 			class="breadcrumb-nav"
 		>
-			<div class="container">
+
+			<div class="container" v-if="category">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
 						<nuxt-link to="/">Home</nuxt-link>
 					</li>
-					<li class="breadcrumb-item active">Shop</li>
+					<li class="breadcrumb-item active">{{category.name}}</li>
 				</ol>
 			</div>
 		</nav>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 main-content">
-					<div class="category-banner pt-0 pb-2">
-						<img
-							class="slide-bg"
-							:src="'./images/home/banners/banner-1.jpg'"
-							alt="banner"
-							width="1500"
-							height="320"
-							style="background: #e8e2e2"
-						/>
-						<div class="category-slide-content pt-1">
-							<h2 class="m-b-3">Winter Fashion Trends</h2>
-							<h3 class="text-uppercase ml-0">Up to 30% off on Jackets</h3>
-
-							<h5 class="text-uppercase d-inline-block mb-1 pb-2">
-								Starting at<span class="coupon-sale-text font2">
-									<sup>$</sup>199<sup>99</sup>
-								</span>
-							</h5>
-							<a
-								href="javascript:;"
-								class="btn btn-dark btn-xl ls-0"
-								role="button"
-							>Shop Now</a>
-						</div>
-					</div>
 
 					<pv-product-list-one
 						:category-list="categoryList"
@@ -106,10 +82,12 @@ export default {
 			categoryList: [],
 			featuredProducts: [],
 			baseSlider6: baseSlider6,
-			isSticky: false
+			isSticky: false,
+      category: null
 		};
 	},
 	mounted: function() {
+	  this.getCategory();
 		this.getCategoryLists();
 		this.resizeHandler();
 		window.addEventListener('resize', this.resizeHandler, {
@@ -120,6 +98,14 @@ export default {
 		window.removeEventListener('resize', this.resizeHandler);
 	},
 	methods: {
+    getCategory: function() {
+      Api.get(`${baseUrl}/categories/` + this.$route.query.categoryUUID, {
+      })
+        .then(response => {
+        this.category = response.data;
+    })
+    .catch(error => ({ error: JSON.stringify(error) }));
+    },
 		getCategoryLists: function() {
 			Api.get(`${baseUrl}/shop/sidebar-list`, {
 				params: { demo: currentDemo }

@@ -12,10 +12,18 @@ public class Product extends AbstractEntity {
 
     private String description;
 
+    private double price;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "product_images", joinColumns = @JoinColumn(name = "product_id"))
     @Column(name = "image_uuid")
     private Set<String> imageUuids = new HashSet<>();
+
+    @Transient
+    private Set<Product> variants = new HashSet<>();
+
+    @Transient
+    private Set<Integer> ratings = new HashSet();
 
     public String getName() {
         return name;
@@ -39,5 +47,29 @@ public class Product extends AbstractEntity {
 
     public void setImageUuids(Set<String> imageUuids) {
         this.imageUuids = imageUuids;
+    }
+
+    public Set<Product> getVariants() {
+        return variants;
+    }
+
+    public void setVariants(Set<Product> variants) {
+        this.variants = variants;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Set<Integer> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(Set<Integer> ratings) {
+        this.ratings = ratings;
     }
 }

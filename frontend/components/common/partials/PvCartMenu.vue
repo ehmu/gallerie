@@ -48,10 +48,10 @@
 							<figure class="product-image-container">
 								<nuxt-link :to="'/product/default/' + product.slug">
 									<img
-										v-lazy="`${baseUrl}${product.small_pictures[0].url}`"
+										v-lazy="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
 										alt="product"
-										:width="product.small_pictures[0].width"
-										:height="product.small_pictures[0].height"
+										:width="50"
+										:height="50"
 									/>
 								</nuxt-link>
 

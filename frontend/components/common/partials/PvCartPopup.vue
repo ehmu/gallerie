@@ -12,11 +12,11 @@
 				<div class="product">
 					<figure class="product-media">
 						<nuxt-link :to="'/product/default' + props.item.data.slug">
-							<img 
-								:src="`${baseUrl}${props.item.data.small_pictures[0].url}`" 
-								alt="product" 
-								:width="props.item.data.small_pictures[0].width"
-								:height="props.item.data.small_pictures[0].height"
+							<img
+								:src="`${baseUrl}/dokumente/downloadDokument/${props.item.data.imageUuids[0]}`"
+								alt="product"
+								:width="50"
+								:height="50"
 							>
 						</nuxt-link>
 					</figure>

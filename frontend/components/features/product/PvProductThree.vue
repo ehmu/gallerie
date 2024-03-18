@@ -3,9 +3,9 @@
 		<figure class="img-effect">
 			<nuxt-link :to="`/product/default/${product.slug}`">
 				<img
-					v-for="(item,index) in product.large_pictures.slice(0,2)"
+					v-for="(item,index) in product.imageUuids.slice(0,2)"
 					:key="`related-large-${index}`"
-					v-lazy="`${baseUrl}${item.url}`"
+					v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
 					alt="large-picture"
 					:width="item.width"
 					:height="item.height"
@@ -102,7 +102,7 @@
 				<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
 			</h3>
 
-			<div class="ratings-container">
+			<!--div class="ratings-container">
 				<div class="product-ratings">
 					<span
 						class="ratings"
@@ -110,7 +110,7 @@
 					></span>
 					<span class="tooltiptext tooltip-top">{{ product.ratings.toFixed(2) }}</span>
 				</div>
-			</div>
+			</div-->
 
 			<div
 				class="price-box"
@@ -189,14 +189,14 @@ export default {
 			this.discount = parseInt(this.discount);
 		}
 
-		if (!this.product.price) {
+		/*if (!this.product.price) {
 			this.minPrice = this.product.variants[0].price;
 			this.product.variants.forEach(item => {
 				let itemPrice = item.is_sale ? item.sale_price : item.price;
 				if (this.minPrice > itemPrice) this.minPrice = itemPrice;
 				if (this.maxPrice < itemPrice) this.maxPrice = itemPrice;
 			});
-		}
+		}*/
 	},
 	methods: {
 		...mapActions('wishlist', ['addToWishlist']),
@@ -230,7 +230,7 @@ export default {
 			}, 1000);
 		},
 		addCart: function() {
-			if (this.product.stock > 0) {
+			if (this.product) {
 				let saledProduct = { ...this.product };
 				if (this.product.is_sale) {
 					saledProduct.price = this.product.sale_price;

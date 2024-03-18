@@ -338,7 +338,7 @@ export default {
 		getProducts: function() {
 			this.products = null;
 			this.totalCount = 0;
-			Api.get(`${baseUrl}/shop`, {
+      Api.get(`${baseUrl}/categories/` + this.$route.query.categoryUUID, {
 				params: {
 					...this.$route.query,
 					demo: currentDemo,
