@@ -110,7 +110,7 @@ public class DokumenteController{
 
     @GetMapping(value = "/downloadDokument/{uuid}")
     public ResponseEntity<ByteArrayResource> downloadDokument(@PathVariable String uuid){
-        LOG.info("Downloading Dokument " + uuid);
+        LOG.debug("Downloading Dokument " + uuid);
         Dokument dokument = this.dokumentService.loadDokumentByUUID(uuid);
         ResponseEntity<ByteArrayResource> responseEntity = ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(dokument.getDocType()))

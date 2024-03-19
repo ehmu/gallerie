@@ -20,7 +20,7 @@
 
 					<pv-product-list-one
 						:category-list="categoryList"
-						:itemsPerRow="5"
+						:itemsPerRow="3"
 					></pv-product-list-one>
 				</div>
 
@@ -99,7 +99,7 @@ export default {
 	},
 	methods: {
     getCategory: function() {
-      Api.get(`${baseUrl}/categories/` + this.$route.query.categoryUUID, {
+      Api.get(`${baseUrl}/shop`, {
       })
         .then(response => {
         this.category = response.data;

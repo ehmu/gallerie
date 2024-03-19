@@ -1,18 +1,15 @@
 package de.trick.gallerie.service;
 
-import de.trick.gallerie.configuration.WebConfig;
 import de.trick.gallerie.entity.Category;
 import de.trick.gallerie.entity.Product;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Date;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,6 +29,8 @@ class CategoryServiceTest {
             product.setName("Produkt "  + i);
             product.setDescription("Beschreibung Produkt " + i);
             product.getImageUuids().add("eee-ddd-ccc-" + i);
+            product.setCreatedAt(new Date());
+            product.setActive(true);
             categoryService.save(product);
             category.getProducts().add(product);
             this.categoryService.saveCategory(category);

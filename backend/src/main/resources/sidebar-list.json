@@ -1,0 +1,930 @@
+{
+  "sidebarList": [
+    {
+      "id": 9,
+      "name": "Accessories",
+      "parent_name": null,
+      "demoes": "demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9,demo11,demo12,demo13,demo14,demo15,demo16,demo18,demo20,demo27,demo33,demo37",
+      "slug": "accessories-1",
+      "created_by": "1",
+      "updated_by": "1",
+      "created_at": "2003-03-30T13:09:10.000000Z",
+      "updated_at": "2008-06-01T23:59:49.000000Z",
+      "products_count": "19",
+      "counts": 9,
+      "children": [
+        {
+          "id": 3,
+          "name": "Bags",
+          "parent_name": "Accessories",
+          "demoes": "demo3",
+          "slug": "bags-1",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-28T04:08:03.000000Z",
+          "updated_at": "2004-01-06T02:52:30.000000Z",
+          "products_count": "4",
+          "counts": "4",
+          "disabled": true
+        },
+        {
+          "id": 4,
+          "name": "Watches",
+          "parent_name": "Accessories",
+          "demoes": "demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9,demo10,demo12,demo13,demo14,demo15,demo18,demo20",
+          "slug": "watches-2",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-28T08:48:06.000000Z",
+          "updated_at": "2002-02-23T18:29:03.000000Z",
+          "products_count": "47",
+          "counts": "5",
+          "disabled": true
+        }
+      ],
+      "disabled": true
+    },
+    {
+      "id": 10,
+      "name": "Electronics",
+      "parent_name": null,
+      "demoes": "demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9,demo11,demo12,demo13,demo14,demo15,demo16,demo18,demo21,demo22,demo36",
+      "slug": "electronics",
+      "created_by": "1",
+      "updated_by": "1",
+      "created_at": "2003-03-30T14:50:15.000000Z",
+      "updated_at": "2009-10-16T20:26:02.000000Z",
+      "products_count": "27",
+      "counts": 8,
+      "children": [
+        {
+          "id": 2,
+          "name": "Headphone",
+          "parent_name": "Electronics",
+          "demoes": "demo2,demo3,demo4,demo5,demo6,demo7,demo9,demo11,demo12,demo13,demo14,demo16,demo21",
+          "slug": "headphone-3",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-27T17:23:12.000000Z",
+          "updated_at": "2000-02-01T17:29:42.000000Z",
+          "products_count": "32",
+          "counts": "3",
+          "disabled": true
+        },
+        {
+          "id": 1,
+          "name": "Toys",
+          "parent_name": "Electronics",
+          "demoes": "demo2,demo3,demo5,demo7,demo8,demo9,demo12,demo13,demo14,demo15,demo16,demo22",
+          "slug": "toys-1",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-27T02:20:47.000000Z",
+          "updated_at": "2009-04-30T00:20:42.000000Z",
+          "products_count": "45",
+          "counts": "5",
+          "disabled": true
+        }
+      ],
+      "disabled": true
+    },
+    {
+      "id": 11,
+      "name": "Fashion",
+      "parent_name": null,
+      "demoes": "demo1,demo2,demo3,demo4,demo5,demo6,demo7,demo8,demo9,demo11,demo12,demo13,demo14,demo15,demo16,demo17,demo20,demo21,demo22,demo30,demo32,demo36",
+      "slug": "fashion",
+      "created_by": "1",
+      "updated_by": "1",
+      "created_at": "2003-03-30T16:00:54.000000Z",
+      "updated_at": "2005-11-26T20:46:22.000000Z",
+      "products_count": "28",
+      "counts": 11,
+      "children": [
+        {
+          "id": 5,
+          "name": "Shoes",
+          "parent_name": "Fashion",
+          "demoes": "demo3,demo4,demo5,demo6,demo7,demo9,demo11,demo12,demo13,demo14,demo15,demo20",
+          "slug": "shoes-3",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-28T12:20:52.000000Z",
+          "updated_at": "2001-12-11T13:22:45.000000Z",
+          "products_count": "48",
+          "counts": "4",
+          "disabled": true
+        },
+        {
+          "id": 6,
+          "name": "T-shirts",
+          "parent_name": "Fashion",
+          "demoes": "demo1,demo2,demo3,demo5,demo6,demo7,demo8,demo9,demo10,demo11,demo13,demo14,demo15,demo16",
+          "slug": "t-shirts",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-28T15:28:34.000000Z",
+          "updated_at": "2002-02-16T15:57:13.000000Z",
+          "products_count": "48",
+          "counts": "5",
+          "disabled": true
+        },
+        {
+          "id": 7,
+          "name": "Trousers",
+          "parent_name": "Fashion",
+          "demoes": "demo2,demo3,demo6,demo7,demo9,demo11,demo12,demo13,demo14",
+          "slug": "trousers-3",
+          "created_by": "1",
+          "updated_by": "1",
+          "created_at": "2003-03-28T19:33:15.000000Z",
+          "updated_at": "2005-04-16T00:42:27.000000Z",
+          "products_count": "21",
+          "counts": "3",
+          "disabled": true
+        }
+      ],
+      "disabled": true
+    }
+  ],
+  "featuredProducts": [
+    {
+      "id": 28,
+      "name": "Men Cap",
+      "slug": "men-cap",
+      "price": null,
+      "sku": "654111995-1-1-2",
+      "stock": 92,
+      "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+      "sale_price": null,
+      "sale_count": 30,
+      "ratings": 5,
+      "reviews": "1",
+      "is_hot": true,
+      "is_sale": null,
+      "is_new": null,
+      "is_out_of_stock": null,
+      "release_date": null,
+      "developer": null,
+      "publisher": null,
+      "game_mode": null,
+      "rated": null,
+      "until": null,
+      "product_categories": [
+        {
+          "name": "Bags",
+          "slug": "bags-1",
+          "parent_name": "Accessories",
+          "disabled": true,
+          "pivot": {
+            "product_id": "28",
+            "product-category_id": "3"
+          }
+        },
+        {
+          "name": "T-shirts",
+          "slug": "t-shirts",
+          "parent_name": "Fashion",
+          "disabled": true,
+          "pivot": {
+            "product_id": "28",
+            "product-category_id": "6"
+          }
+        }
+      ],
+      "small_pictures": [
+        {
+          "width": "150",
+          "height": "150",
+          "url": "\/uploads\/product_13_4_150x150_25e19f3143.jpg",
+          "pivot": {
+            "related_id": "28",
+            "upload_file_id": "280"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "id": 59,
+          "price": 299,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "28",
+            "component_id": "59"
+          },
+          "size": [
+            {
+              "id": 59,
+              "size_name": "Extra Large",
+              "size": "XL",
+              "pivot": {
+                "components_variants_variant_id": "59",
+                "component_id": "59"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 60,
+              "color_name": "green",
+              "color": "#81d742",
+              "pivot": {
+                "components_variants_variant_id": "59",
+                "component_id": "60"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 60,
+          "price": 199,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "28",
+            "component_id": "60"
+          },
+          "size": [
+            {
+              "id": 60,
+              "size_name": "Extra Large",
+              "size": "XL",
+              "pivot": {
+                "components_variants_variant_id": "60",
+                "component_id": "60"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 61,
+              "color_name": "indigo",
+              "color": "#6085a5",
+              "pivot": {
+                "components_variants_variant_id": "60",
+                "component_id": "61"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Men Shoes",
+      "slug": "men-shoes",
+      "price": 39,
+      "sku": "PT0007",
+      "stock": 65,
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.",
+      "sale_price": null,
+      "sale_count": 0,
+      "ratings": 0,
+      "reviews": "0",
+      "is_hot": true,
+      "is_sale": null,
+      "is_new": true,
+      "is_out_of_stock": null,
+      "release_date": null,
+      "developer": null,
+      "publisher": null,
+      "game_mode": null,
+      "rated": null,
+      "until": null,
+      "product_categories": [
+        {
+          "name": "Headphone",
+          "slug": "headphone-3",
+          "parent_name": "Electronics",
+          "disabled": true,
+          "pivot": {
+            "product_id": "29",
+            "product-category_id": "2"
+          }
+        },
+        {
+          "name": "Shoes",
+          "slug": "shoes-3",
+          "parent_name": "Fashion",
+          "disabled": true,
+          "pivot": {
+            "product_id": "29",
+            "product-category_id": "5"
+          }
+        },
+        {
+          "name": "Dress",
+          "slug": "dress",
+          "parent_name": null,
+          "disabled": true,
+          "pivot": {
+            "product_id": "29",
+            "product-category_id": "8"
+          }
+        },
+        {
+          "name": "Watches",
+          "slug": "watches-2",
+          "parent_name": "Accessories",
+          "disabled": true,
+          "pivot": {
+            "product_id": "29",
+            "product-category_id": "4"
+          }
+        }
+      ],
+      "small_pictures": [
+        {
+          "width": "150",
+          "height": "150",
+          "url": "\/uploads\/product_3_1_150x150_23bc40e746.jpg",
+          "pivot": {
+            "related_id": "29",
+            "upload_file_id": "287"
+          }
+        },
+        {
+          "width": "150",
+          "height": "150",
+          "url": "\/uploads\/product_3_2_150x150_ae7523f0f4.jpg",
+          "pivot": {
+            "related_id": "29",
+            "upload_file_id": "286"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "id": 61,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "29",
+            "component_id": "61"
+          },
+          "size": [
+            {
+              "id": 61,
+              "size_name": "Extra Large",
+              "size": "XL",
+              "pivot": {
+                "components_variants_variant_id": "61",
+                "component_id": "61"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 62,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "61",
+                "component_id": "62"
+              },
+              "color_thumbnail": [
+                {
+                  "id": 287,
+                  "name": "product-3-1-150x150.jpg",
+                  "alternativeText": "",
+                  "caption": "",
+                  "width": "150",
+                  "height": "150",
+                  "formats": null,
+                  "hash": "product_3_1_150x150_23bc40e746",
+                  "ext": ".jpg",
+                  "mime": "image\/jpeg",
+                  "size": "1.91",
+                  "url": "\/uploads\/product_3_1_150x150_23bc40e746.jpg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "created_by": "1",
+                  "updated_by": "1",
+                  "created_at": "2006-01-19T01:35:34.000000Z",
+                  "updated_at": "2006-01-19T01:36:46.000000Z",
+                  "pivot": {
+                    "related_id": "62",
+                    "upload_file_id": "287"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "29",
+            "component_id": "62"
+          },
+          "size": [
+            {
+              "id": 62,
+              "size_name": "Medium",
+              "size": "M",
+              "pivot": {
+                "components_variants_variant_id": "62",
+                "component_id": "62"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 63,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "62",
+                "component_id": "63"
+              },
+              "color_thumbnail": [
+                {
+                  "id": 287,
+                  "name": "product-3-1-150x150.jpg",
+                  "alternativeText": "",
+                  "caption": "",
+                  "width": "150",
+                  "height": "150",
+                  "formats": null,
+                  "hash": "product_3_1_150x150_23bc40e746",
+                  "ext": ".jpg",
+                  "mime": "image\/jpeg",
+                  "size": "1.91",
+                  "url": "\/uploads\/product_3_1_150x150_23bc40e746.jpg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "created_by": "1",
+                  "updated_by": "1",
+                  "created_at": "2006-01-19T01:35:34.000000Z",
+                  "updated_at": "2006-01-19T01:36:46.000000Z",
+                  "pivot": {
+                    "related_id": "63",
+                    "upload_file_id": "287"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "29",
+            "component_id": "63"
+          },
+          "size": [
+            {
+              "id": 63,
+              "size_name": "Large",
+              "size": "L",
+              "pivot": {
+                "components_variants_variant_id": "63",
+                "component_id": "63"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 64,
+              "color_name": "red",
+              "color": "#ab6e6e",
+              "pivot": {
+                "components_variants_variant_id": "63",
+                "component_id": "64"
+              },
+              "color_thumbnail": [
+                {
+                  "id": 286,
+                  "name": "product-3-2-150x150.jpg",
+                  "alternativeText": "",
+                  "caption": "",
+                  "width": "150",
+                  "height": "150",
+                  "formats": null,
+                  "hash": "product_3_2_150x150_ae7523f0f4",
+                  "ext": ".jpg",
+                  "mime": "image\/jpeg",
+                  "size": "2.67",
+                  "url": "\/uploads\/product_3_2_150x150_ae7523f0f4.jpg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "created_by": "1",
+                  "updated_by": "1",
+                  "created_at": "2006-01-19T01:35:03.000000Z",
+                  "updated_at": "2006-01-19T01:36:09.000000Z",
+                  "pivot": {
+                    "related_id": "64",
+                    "upload_file_id": "286"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "29",
+            "component_id": "64"
+          },
+          "size": [
+            {
+              "id": 64,
+              "size_name": "Small",
+              "size": "S",
+              "pivot": {
+                "components_variants_variant_id": "64",
+                "component_id": "64"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 65,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "64",
+                "component_id": "65"
+              },
+              "color_thumbnail": [
+                {
+                  "id": 286,
+                  "name": "product-3-2-150x150.jpg",
+                  "alternativeText": "",
+                  "caption": "",
+                  "width": "150",
+                  "height": "150",
+                  "formats": null,
+                  "hash": "product_3_2_150x150_ae7523f0f4",
+                  "ext": ".jpg",
+                  "mime": "image\/jpeg",
+                  "size": "2.67",
+                  "url": "\/uploads\/product_3_2_150x150_ae7523f0f4.jpg",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "provider_metadata": null,
+                  "created_by": "1",
+                  "updated_by": "1",
+                  "created_at": "2006-01-19T01:35:03.000000Z",
+                  "updated_at": "2006-01-19T01:36:09.000000Z",
+                  "pivot": {
+                    "related_id": "65",
+                    "upload_file_id": "286"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Black High heeled Shoes",
+      "slug": "black-high-heeled-shoes",
+      "price": 69,
+      "sku": "N\/A",
+      "stock": 39,
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "sale_price": null,
+      "sale_count": 0,
+      "ratings": 0,
+      "reviews": "0",
+      "is_hot": true,
+      "is_sale": null,
+      "is_new": null,
+      "is_out_of_stock": null,
+      "release_date": null,
+      "developer": null,
+      "publisher": null,
+      "game_mode": null,
+      "rated": null,
+      "until": null,
+      "product_categories": [
+        {
+          "name": "Shoes",
+          "slug": "shoes-3",
+          "parent_name": "Fashion",
+          "disabled": true,
+          "pivot": {
+            "product_id": "31",
+            "product-category_id": "5"
+          }
+        },
+        {
+          "name": "Trousers",
+          "slug": "trousers-3",
+          "parent_name": "Fashion",
+          "disabled": true,
+          "pivot": {
+            "product_id": "31",
+            "product-category_id": "7"
+          }
+        }
+      ],
+      "small_pictures": [
+        {
+          "width": "150",
+          "height": "150",
+          "url": "\/uploads\/product_11_1_150x150_47d97fa075.jpg",
+          "pivot": {
+            "related_id": "31",
+            "upload_file_id": "305"
+          }
+        },
+        {
+          "width": "150",
+          "height": "150",
+          "url": "\/uploads\/product_11_2_150x150_b9799ddf97.jpg",
+          "pivot": {
+            "related_id": "31",
+            "upload_file_id": "304"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "id": 71,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "71"
+          },
+          "size": [
+            {
+              "id": 73,
+              "size_name": "Large",
+              "size": "L",
+              "pivot": {
+                "components_variants_variant_id": "71",
+                "component_id": "73"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 72,
+              "color_name": "green",
+              "color": "#81d742",
+              "pivot": {
+                "components_variants_variant_id": "71",
+                "component_id": "72"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "73"
+          },
+          "size": [
+            {
+              "id": 76,
+              "size_name": "Extra Large",
+              "size": "XL",
+              "pivot": {
+                "components_variants_variant_id": "73",
+                "component_id": "76"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 76,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "73",
+                "component_id": "76"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 77,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "77"
+          },
+          "size": [
+            {
+              "id": 77,
+              "size_name": "Large",
+              "size": "L",
+              "pivot": {
+                "components_variants_variant_id": "77",
+                "component_id": "77"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 74,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "77",
+                "component_id": "74"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 78,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "78"
+          },
+          "size": [
+            {
+              "id": 78,
+              "size_name": "Medium",
+              "size": "M",
+              "pivot": {
+                "components_variants_variant_id": "78",
+                "component_id": "78"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 78,
+              "color_name": "black",
+              "color": "#000000",
+              "pivot": {
+                "components_variants_variant_id": "78",
+                "component_id": "78"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 72,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "72"
+          },
+          "size": [
+            {
+              "id": 75,
+              "size_name": "Large",
+              "size": "L",
+              "pivot": {
+                "components_variants_variant_id": "72",
+                "component_id": "75"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 75,
+              "color_name": "blue",
+              "color": "#0188cc",
+              "pivot": {
+                "components_variants_variant_id": "72",
+                "component_id": "75"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 76,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "76"
+          },
+          "size": [
+            {
+              "id": 72,
+              "size_name": "Small",
+              "size": "S",
+              "pivot": {
+                "components_variants_variant_id": "76",
+                "component_id": "72"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 79,
+              "color_name": "blue",
+              "color": "#0188cc",
+              "pivot": {
+                "components_variants_variant_id": "76",
+                "component_id": "79"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "74"
+          },
+          "size": [
+            {
+              "id": 71,
+              "size_name": "Large",
+              "size": "L",
+              "pivot": {
+                "components_variants_variant_id": "74",
+                "component_id": "71"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 73,
+              "color_name": "red",
+              "color": "#ab6e6e",
+              "pivot": {
+                "components_variants_variant_id": "74",
+                "component_id": "73"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "price": null,
+          "sale_price": null,
+          "pivot": {
+            "product_id": "31",
+            "component_id": "75"
+          },
+          "size": [
+            {
+              "id": 74,
+              "size_name": "Medium",
+              "size": "M",
+              "pivot": {
+                "components_variants_variant_id": "75",
+                "component_id": "74"
+              },
+              "size_thumbnail": []
+            }
+          ],
+          "colors": [
+            {
+              "id": 77,
+              "color_name": "red",
+              "color": "#ab6e6e",
+              "pivot": {
+                "components_variants_variant_id": "75",
+                "component_id": "77"
+              },
+              "color_thumbnail": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "totalCount": 11,
+  "products": [
+
+    {
+      "id": 27,
+      "name": "Ideapad",
+      "slug": "ideapad",
+      "price": 299,
+      "stock": 1,
+      "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+      "ratings": 3,
+      "product_categories": [],
+      "imageUuids": [
+        "eee-ddd-ccc-1",
+        "eee-ddd-ccc-4"
+      ],
+      "variants": []
+    }
+
+  ]
+}
