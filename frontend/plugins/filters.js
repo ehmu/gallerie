@@ -3,7 +3,7 @@ import Vue from 'vue';
 Vue.filter( 'priceFormat', function ( value ) {
     if ( value === undefined ) return '';
 
-    return value.toLocaleString( undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 } );
+    return value.toLocaleString( undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 } ) + ' EUR';
 } )
 
 Vue.filter( 'capitalize', function ( value ) {

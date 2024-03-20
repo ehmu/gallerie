@@ -16,7 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_axios_39b537f8 from 'nuxt_plugin_axios_39b537f8' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_47efe7a0 from 'nuxt_plugin_cookieuniversalnuxt_47efe7a0' // Source: ./cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_plugins_e476404e from 'nuxt_plugin_plugins_e476404e' // Source: ../plugins (mode: 'client')
-import nuxt_plugin_localstorage_47a6c111 from 'nuxt_plugin_localstorage_47a6c111' // Source: ../plugins/localstorage.js (mode: 'client')
+import nuxt_plugin_localstorage_47a6c111 from 'nuxt_plugin_localstorage_47a6c111' // Source: ../plugins/localstorage.js (mode: 'all')
 import nuxt_plugin_filters_2dd71012 from 'nuxt_plugin_filters_2dd71012' // Source: ../plugins/filters.js (mode: 'client')
 import nuxt_plugin_animate_549e7eab from 'nuxt_plugin_animate_549e7eab' // Source: ../plugins/directives/animate.js (mode: 'client')
 import nuxt_plugin_parallax_20dd086b from 'nuxt_plugin_parallax_20dd086b' // Source: ../plugins/directives/parallax.js (mode: 'client')
@@ -85,7 +85,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"Trick-Manufaktur","title":"Trick-Manufaktur","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Trick-Manufaktur"},{"name":"author","content":"Trick-Manufaktur"},{"name":"keywords","content":"Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln"},{"name":"app-mobile-web-app-title","content":"Trick-Manufaktur"},{"name":"application-name","content":"Trick-Manufaktur"},{"name":"msapplication-TileColor","content":"#cc9966"},{"name":"msapplication-config","content":"\u002Fimages\u002Ficons\u002Fbrowserconfig.xml"}],"link":[{"rel":"dns-prefetch","href":"\u002F\u002Ffonts.googleapis.com"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":".\u002Fimages\u002Ficons\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":".\u002Fimages\u002Ficons\u002Ffavicon.ico"},{"rel":"shortcut icon","href":".\u002Fimages\u002Ficons\u002Ffavicon.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":".\u002Fimages\u002Ficons\u002Fapple-touch-icon.png"},{"rel":"mask-icon","color":"#666666","href":".\u002Fimages\u002Ficons\u002Fsafari-pinned-tab.svg"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Open+Sans:300,400,600,700%7CPoppins:300,400,500,600,700%7COswald:600"}],"style":[],"script":[]},
+    head: {"titleTemplate":"Trick-Manufaktur","title":"Trick-Manufaktur","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Trick-Manufaktur"},{"name":"author","content":"Martina Ehmann-Rick"},{"name":"keywords","content":"Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln, Bilder, Acryl, Abstrakte Kunst"},{"name":"app-mobile-web-app-title","content":"Trick-Manufaktur"},{"name":"application-name","content":"Trick-Manufaktur"},{"name":"msapplication-TileColor","content":"#cc9966"},{"name":"msapplication-config","content":"\u002Fimages\u002Ficons\u002Fbrowserconfig.xml"}],"link":[{"rel":"dns-prefetch","href":"\u002F\u002Ffonts.googleapis.com"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":".\u002Fimages\u002Ficons\u002Ffavicon-32x32.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"16x16","href":".\u002Fimages\u002Ficons\u002Ffavicon.ico"},{"rel":"shortcut icon","href":".\u002Fimages\u002Ficons\u002Ffavicon.ico"},{"rel":"apple-touch-icon","sizes":"180x180","href":".\u002Fimages\u002Ficons\u002Fapple-touch-icon.png"},{"rel":"mask-icon","color":"#666666","href":".\u002Fimages\u002Ficons\u002Fsafari-pinned-tab.svg"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Open+Sans:300,400,600,700%7CPoppins:300,400,500,600,700%7COswald:600"}],"style":[],"script":[]},
 
     store,
     router,
@@ -227,7 +227,7 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugins_e476404e(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_localstorage_47a6c111 === 'function') {
+  if (typeof nuxt_plugin_localstorage_47a6c111 === 'function') {
     await nuxt_plugin_localstorage_47a6c111(app.context, inject)
   }
 

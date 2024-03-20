@@ -16,11 +16,11 @@ export default {
             },
             {
                 name: 'author',
-                content: 'Trick-Manufaktur'
+                content: 'Martina Ehmann-Rick'
             },
             {
                 name: 'keywords',
-                content: 'Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln'
+                content: 'Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln, Bilder, Acryl, Abstrakte Kunst'
             },
             {
                 name: 'app-mobile-web-app-title',
@@ -95,7 +95,7 @@ export default {
 
     plugins: [
         { src: '~/plugins', ssr: false },
-        { src: '~/plugins/localstorage.js', ssr: false },
+        { src: '~/plugins/localstorage.js', ssr: true },
         { src: '~/plugins/filters.js', ssr: false },
         { src: '~/plugins/directives/animate.js', ssr: false },
         { src: '~/plugins/directives/parallax.js', ssr: false },

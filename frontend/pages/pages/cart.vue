@@ -5,10 +5,10 @@
 				<a href="javascript:;">Wunschliste</a>
 			</li>
 			<li>
-				<nuxt-link to="/pages/checkout">Checkout</nuxt-link>
+				<nuxt-link to="/pages/checkout">Anfrage stellen</nuxt-link>
 			</li>
 			<li class="disabled">
-				<a href="javascript:;">Order Complete</a>
+				<a href="javascript:;">Fertig</a>
 			</li>
 		</ul>
 
@@ -23,10 +23,10 @@
 						<thead>
 							<tr>
 								<th class="thumbnail-col"></th>
-								<th class="product-col">Product</th>
-								<th class="price-col">Price</th>
-								<th class="qty-col">Quantity</th>
-								<th class="text-right">Subtotal</th>
+								<th class="product-col">Name</th>
+								<th class="price-col">Preis</th>
+								<th class="qty-col">Anzahl</th>
+								<th class="text-right">Total</th>
 							</tr>
 						</thead>
 
@@ -43,9 +43,9 @@
 											class="product-image"
 										>
 											<img
-												:src="`${baseUrl}${product.small_pictures[0].url}`"
-												:width="product.small_pictures[0].width"
-												:height="product.small_pictures[0].height"
+												:src="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
+												:width="100"
+												:height="100"
 												alt="product"
 											/>
 										</nuxt-link>
@@ -65,7 +65,7 @@
 									</h5>
 								</td>
 
-								<td>${{ product.price | priceFormat }}</td>
+								<td>{{ product.price | priceFormat }}</td>
 
 								<td>
 									<pv-quantity-input
@@ -76,7 +76,7 @@
 								</td>
 
 								<td class="text-right">
-									<span class="subtotal-price">${{ product.price * product.qty | priceFormat }}</span>
+									<span class="subtotal-price">{{ product.price * product.qty | priceFormat }}</span>
 								</td>
 							</tr>
 						</tbody>
@@ -87,7 +87,7 @@
 									colspan="5"
 									class="clearfix"
 								>
-									<div class="float-left">
+									<!--div class="float-left">
 										<div class="cart-discount">
 											<form action="#">
 												<div class="input-group">
@@ -109,15 +109,15 @@
 												</div>
 											</form>
 										</div>
-									</div>
+									</div-->
 
-									<div class="float-right">
+									<!--div class="float-right">
 										<button
 											type="submit"
 											class="btn btn-shop btn-update-cart"
 											@click="updateCart({cartItems: cartItems})"
 										>Update Cart</button>
-									</div>
+									</div-->
 								</td>
 							</tr>
 						</tfoot>
@@ -127,12 +127,12 @@
 
 			<div class="col-lg-4">
 				<div class="cart-summary">
-					<h3>CART TOTALS</h3>
+					<h3>Übersicht</h3>
 
 					<table class="table table-totals">
-						<tbody>
+						<!--tbody>
 							<tr>
-								<td>Subtotal</td>
+								<td>Total</td>
 								<td>${{ totalPrice | priceFormat }}</td>
 							</tr>
 
@@ -215,12 +215,12 @@
 									</form>
 								</td>
 							</tr>
-						</tbody>
+						</tbody-->
 
 						<tfoot>
 							<tr>
 								<td>Total</td>
-								<td>${{ totalPrice | priceFormat }}</td>
+								<td>{{ totalPrice | priceFormat }}</td>
 							</tr>
 						</tfoot>
 					</table>
@@ -230,7 +230,7 @@
 							to="/pages/checkout"
 							class="btn btn-block btn-dark"
 						>
-							Proceed to Checkout
+							Anfrage stellen
 							<i class="fa fa-arrow-right"></i>
 						</nuxt-link>
 					</div>
@@ -278,7 +278,7 @@
 							colspan="6"
 							class="px-3 py-2 text-center"
 						>
-							<i class="icon-bag-2 cart-empty"></i>
+							<i class="icon-wishlist-2 cart-empty"></i>
 						</td>
 					</tr>
 					<tr class="border-0 py-0">
@@ -286,8 +286,7 @@
 							colspan="6"
 							class="px-3 py-2 text-center cart-empty"
 						>
-							No products added to the
-							cart
+							Die Liste ist leer
 						</td>
 					</tr>
 					<tr class="border-0 py-0">
@@ -298,7 +297,7 @@
 							<nuxt-link
 								to="/shop"
 								class="btn btn-go-shop"
-							>GO SHOP</nuxt-link>
+							>Zur Bildergallerie</nuxt-link>
 						</td>
 					</tr>
 				</tbody>

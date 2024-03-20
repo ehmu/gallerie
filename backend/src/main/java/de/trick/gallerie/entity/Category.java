@@ -28,7 +28,7 @@ public class Category extends AbstractEntity{
     private Integer counts;
 
     public String getSlug() {
-        return String.valueOf(this.getId());
+        return this.getUuid();
     }
 
     public Integer getCounts() {

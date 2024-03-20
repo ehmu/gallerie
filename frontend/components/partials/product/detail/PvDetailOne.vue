@@ -98,7 +98,7 @@
 				</strong>
 			</li>
 
-			<li v-if="product.product_tags.length > 0">
+			<!--li v-if="product.product_tags.length > 0">
 				TAGS:
 				<strong>
 					<nuxt-link
@@ -111,10 +111,10 @@
 						<template v-if="index < product.product_tags.length - 1">,</template>
 					</nuxt-link>
 				</strong>
-			</li>
+			</li-->
 		</ul>
 
-		<div
+		<!--div
 			class="product-filters-container"
 			v-if="product.variants.length > 0"
 		>
@@ -210,10 +210,10 @@
 					>Clear</a>
 				</vue-slide-toggle>
 			</div>
-		</div>
+		</div-->
 
 		<div class="product-action">
-			<vue-slide-toggle
+			<!--vue-slide-toggle
 				:open="isPriceShow"
 				v-if="product.variants.length > 0"
 			>
@@ -240,7 +240,7 @@
 						<span class="product-price">${{ product.variants[curIndex].price | priceFormat }}</span>
 					</template>
 				</div>
-			</vue-slide-toggle>
+			</vue-slide-toggle-->
 
 			<div class="product-single-qty">
 				<div class="input-group bootstrap-touchspin bootstrap-touchspin-injected">
@@ -463,7 +463,7 @@ export default {
 		this.getFlag();
 	},
 	mounted: function() {
-		if (this.product.variants && !this.product.price) {
+		/*if (this.product.variants && !this.product.price) {
 			this.minPrice = this.product.variants[0].price;
 
 			this.product.variants.forEach(item => {
@@ -471,7 +471,7 @@ export default {
 				if (this.minPrice > itemPrice) this.minPrice = itemPrice;
 				if (this.maxPrice < itemPrice) this.maxPrice = itemPrice;
 			});
-		}
+		}*/
 
 		if (this.product.variants.length > 0) {
 			if (this.product.variants[0].size[0])

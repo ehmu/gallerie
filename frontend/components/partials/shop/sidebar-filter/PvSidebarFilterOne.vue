@@ -204,7 +204,7 @@ export default {
 		};
 	},
 	watch: {
-		$route: function() {
+		$route: function() {console.log("fsfsw")
 			this.getFlag();
 
 			if (this.$route.query.min_price) {
@@ -227,6 +227,10 @@ export default {
 	},
 	created: function() {
 		this.getFlag();
+
+    if (this.$route.query.category) {
+      this.currentCategory = this.$route.query.category;
+    }
 
 		if (this.$route.query.min_price) {
 			this.prices = [

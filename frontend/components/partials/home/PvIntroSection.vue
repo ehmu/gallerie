@@ -31,7 +31,7 @@
 					</span>
         </h5>
         <nuxt-link
-          :to="'/shop?categoryUUID=' + category.uuid"
+          :to="'/shop?category=' + category.uuid"
           class="btn btn-dark btn-xl"
           role="button"
         >Mehr anzeigen</nuxt-link>

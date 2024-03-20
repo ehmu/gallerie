@@ -236,7 +236,7 @@
       v-if="products && products.length > 0"
     >
       <div class="toolbox-item toolbox-show mb-0">
-        <label>Show:</label>
+        <label>Anzeige:</label>
 
         <div class="select-custom">
           <select

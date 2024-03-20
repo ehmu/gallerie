@@ -48,12 +48,12 @@ public class ShopController {
             @RequestParam(name = "per_page", required = false, defaultValue = "1")Integer perPage,
             @RequestParam(name = "page", required = false, defaultValue = "1")Integer page,
             @RequestParam(name = "order_by", required = false, defaultValue = "default")OrderType orderBy,
-            @RequestParam(name = "category", required = false)Integer categoryId,
+            @RequestParam(name = "category", required = false)String categoryUuid,
             @RequestParam(name = "color", required = false)ColorType[] colors,
             @RequestParam(name = "size", required = false)PicturesizeType[] sizes
             ) {
         page--;
-        Page<Product> result = this.productService.loadProducts(page, perPage, true, orderBy.getDatabaseName(), colors, sizes, categoryId);
+        Page<Product> result = this.productService.loadProducts(page, perPage, true, orderBy.getDatabaseName(), colors, sizes, categoryUuid);
         ProductListDTO productList = new ProductListDTO();
         result.get().forEach(product -> productList.getProducts().add(product));
         productList.setTotalCount((int) result.getTotalElements());

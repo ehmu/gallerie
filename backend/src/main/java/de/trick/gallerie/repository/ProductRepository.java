@@ -52,17 +52,17 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
         return (product, cq, cb) -> cb.like(product.get("name"), "%" + name + "%");
     }
 
-    static Specification<Product> hasCategory(final Integer categoryId) {
+    static Specification<Product> hasCategory(final String categoryUuid) {
 
         return (root, query, cb) -> {
-            if(categoryId != null){
+            if(categoryUuid != null){
             query.distinct(true);
             Root<Product> product = root;
             Subquery<Category> categorySubQuery = query.subquery(Category.class);
             Root<Category> category = categorySubQuery.from(Category.class);
             Expression<Collection<Product>> categoryProducts = category.get("products");
             categorySubQuery.select(category);
-            categorySubQuery.where(cb.equal(category.get("id"), categoryId), cb.isMember(product, categoryProducts));
+            categorySubQuery.where(cb.equal(category.get("uuid"), categoryUuid), cb.isMember(product, categoryProducts));
             return cb.exists(categorySubQuery);
             }
             else {

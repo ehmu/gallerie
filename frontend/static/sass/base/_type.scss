@@ -31,7 +31,7 @@ h6, .h6 {
 h1, .h1 {
 	font-size: 3.6rem;
 	font-weight: 400;
-	line-height: 1.223;
+	line-height: 10.223;
 }
 
 h2, .h2 {
@@ -197,7 +197,7 @@ a:focus {
     font-family: $third-font-family !important;
 }
 
-.title-decorate::before, 
+.title-decorate::before,
 .title-decorate::after {
     content: '';
     top: 50%;
@@ -305,5 +305,5 @@ a:focus {
 		flex: 1;
 		-ms-flex: 1;
 		max-width: 100%;
-	}	
+	}
 }

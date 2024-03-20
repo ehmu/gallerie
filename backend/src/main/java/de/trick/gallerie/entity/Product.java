@@ -44,7 +44,8 @@ public class Product extends AbstractEntity {
     @Transient
     private Set<Product> variants = new HashSet<>();
 
-
+    @Transient
+    private String slug;
 
     public String getName() {
         return name;
@@ -132,5 +133,13 @@ public class Product extends AbstractEntity {
 
     public void setColor(ColorType color) {
         this.color = color;
+    }
+
+    public String getSlug() {
+        return this.getUuid();
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 }

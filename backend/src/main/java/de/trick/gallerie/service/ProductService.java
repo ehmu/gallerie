@@ -40,9 +40,9 @@ public class ProductService extends AbstractService{
     }
 
     @Transactional
-    public Page<Product> loadProducts(Integer page, Integer perPage, Boolean onlyActive, String orderBy, ColorType[] colors, PicturesizeType[] sizes, Integer categoryId){
+    public Page<Product> loadProducts(Integer page, Integer perPage, Boolean onlyActive, String orderBy, ColorType[] colors, PicturesizeType[] sizes, String categoryUuid){
         Page<Product> result = productRepository.findAll(
-                Specification.where(ProductRepository.isActive(onlyActive)).and(ProductRepository.containsColors(colors).and(ProductRepository.containsSizes(sizes)).and(ProductRepository.hasCategory(categoryId))),
+                Specification.where(ProductRepository.isActive(onlyActive)).and(ProductRepository.containsColors(colors).and(ProductRepository.containsSizes(sizes)).and(ProductRepository.hasCategory(categoryUuid))),
                 PageRequest.of(page, perPage, Sort.by(Sort.Direction.DESC, orderBy))
         );
         return result;

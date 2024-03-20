@@ -11,12 +11,12 @@
                 class="product-single-carousel show-nav-hover"
                 :options="baseSlider1"
             >
-                <div class="swiper-slide" v-for="item in product.large_pictures" :key="item.name">
+                <div class="swiper-slide" v-for="item in product.imageUuids" :key="item">
                     <img
                         class="product-single-image"
-                        v-lazy="`${baseUrl}${item.url}`"
-                        :width="item.width"
-                        :height="item.height"
+                        v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
+                        :width="500"
+                        :height="500"
                         alt="lgPicture"
                     />
                 </div>
@@ -35,15 +35,15 @@
         >
             <div
                 class="swiper-dot swiper-slide"
-                v-for="(item,index) in product.pictures"
+                v-for="(item,index) in product.imageUuids"
                 :key="'media-one' + index"
                 @click="activeThumbItem(index, $event)"
                 :class="{ active : index === 0 }"
             >
                 <img
-                    v-lazy="`${baseUrl}${item.url}`"
-                    :width="item.width"
-                    :height="item.height"
+                    v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
+                    :width="500"
+                    :height="500"
                     alt="product-thumbnail"
                 />
             </div>
@@ -80,12 +80,12 @@ export default {
 	},
 	computed: {
 		lightBoxMedia: function () {
-			return this.product.large_pictures.reduce( ( acc, cur ) => {
+			return this.product.imageUuids.reduce( ( acc, cur ) => {
 				return [
 					...acc,
 					{
-						src: `${ baseUrl }${ cur.url }`,
-						thumb: `${ baseUrl }${ cur.url }`
+						src: `${ baseUrl }/dokumente/downloadDokument/${ cur }`,
+						thumb: `${ baseUrl }/dokumente/downloadDokument/${ cur }`
 					}
 				];
 			}, [] );

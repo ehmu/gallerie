@@ -41,7 +41,7 @@
 
 								<span class="cart-product-info">
 									<span class="cart-product-qty">{{ product.qty }}</span>
-									× ${{ product.price | priceFormat }}
+									× {{ product.price | priceFormat }}
 								</span>
 							</div>
 
@@ -68,9 +68,9 @@
 					</div>
 
 					<div class="dropdown-cart-total">
-						<span>SUBTOTAL:</span>
+						<span>TOTAL:</span>
 
-						<span class="cart-total-price float-right">${{ totalPrice | priceFormat }}</span>
+						<span class="cart-total-price float-right">{{ totalPrice | priceFormat }}</span>
 					</div>
 
 					<div class="dropdown-cart-action">
