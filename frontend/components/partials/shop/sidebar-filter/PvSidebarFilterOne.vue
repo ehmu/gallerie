@@ -17,7 +17,7 @@
 					href="javascript:;"
 					@click="catOpened = !catOpened"
 					:class="{'collapsed': !catOpened}"
-				>Categories</a>
+				>Kategorien</a>
 			</h3>
 
 			<vue-slide-toggle :open="catOpened">
@@ -48,44 +48,9 @@
 				<nuxt-link
 					:to="{path: $router.path}"
 					class="btn btn-primary reset-filter-btn router-link-active"
-				>Reset All Filters</nuxt-link>
+				>Alle Filter zurücksetzen</nuxt-link>
 			</div>
 		</vue-slide-toggle>
-
-		<div class="widget">
-			<h3 class="widget-title">
-				<a
-					data-toggle="collapse"
-					href="javascript:;"
-					@click="priceOpenened = !priceOpenened"
-					:class="{'collapsed': !priceOpenened}"
-				>Price</a>
-			</h3>
-
-			<vue-slide-toggle :open="priceOpenened">
-				<div class="widget-body pb-0">
-					<form action="#">
-						<div class="price-slider-wrapper">
-							<vue-nouislider
-								:config="priceSettings"
-								:values="prices"
-								v-if="priceReset"
-								id="price-slider"
-							></vue-nouislider>
-						</div>
-
-						<div class="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
-							<div class="filter-price-text">Price: ${{ prices[0] }} - ${{ prices[1] }}</div>
-
-							<nuxt-link
-								:to="priceFilterRoute"
-								class="btn btn-primary"
-							>Filter</nuxt-link>
-						</div>
-					</form>
-				</div>
-			</vue-slide-toggle>
-		</div>
 
 		<div class="widget widget-color">
 			<h3 class="widget-title">
@@ -94,7 +59,7 @@
 					href="javascript:;"
 					@click="colorOpened = !colorOpened"
 					:class="{'collapsed': !colorOpened}"
-				>Color</a>
+				>Farben</a>
 			</h3>
 
 			<vue-slide-toggle :open="colorOpened">
@@ -125,7 +90,7 @@
 					href="javascript:;"
 					@click="sizeOpened = !sizeOpened"
 					:class="{'collapsed': !sizeOpened}"
-				>Size</a>
+				>Größen</a>
 			</h3>
 
 			<vue-slide-toggle :open="sizeOpened">
@@ -136,36 +101,13 @@
 							:key="'size-filter' + index"
 							:class="{active: isActivedSize(item)}"
 						>
-							<nuxt-link :to="sizeFilterRoute(item)">{{ item.size }}</nuxt-link>
+							<nuxt-link :to="sizeFilterRoute(item)">{{ item.name }}</nuxt-link>
 						</li>
 					</ul>
 				</div>
 			</vue-slide-toggle>
 		</div>
 
-		<div class="widget widget-brand">
-			<h3 class="widget-title">
-				<a
-					href="javascript:;"
-					@click="brandOpened = !brandOpened"
-					:class="{'collapsed': !brandOpened}"
-				>Brand</a>
-			</h3>
-
-			<vue-slide-toggle :open="brandOpened">
-				<div class="widget-body pb-0">
-					<ul class="config-brand-list mb-0">
-						<li
-							v-for="(item,index) in shopBrands"
-							:key="'brand-filter' + index"
-							:class="{active: isActivedBrand(item)}"
-						>
-							<nuxt-link :to="brandFilterRoute(item)">{{ item.brand }}</nuxt-link>
-						</li>
-					</ul>
-				</div>
-			</vue-slide-toggle>
-		</div>
 
 		<!-- <div
 			class="widget widget-featured"
@@ -230,7 +172,9 @@ export default {
 	},
 	props: {
 		categoryList: Array,
-		featuredProducts: Array
+		featuredProducts: Array,
+    shopColors: Array,
+    shopSizes: Array
 	},
 	data: function() {
 		return {
@@ -249,8 +193,8 @@ export default {
 					max: 1000
 				}
 			},
-			shopColors: shopColors,
-			shopSizes: shopSizes,
+			//shopColors: shopColors,
+			//shopSizes: shopSizes,
 			shopBrands: shopBrands,
 			baseSlider1: baseSlider1,
 			emptyObject: {},
@@ -317,11 +261,11 @@ export default {
 			let selectedColors = this.$route.query.color
 				? this.$route.query.color.split(',')
 				: [];
-			let index = selectedColors.indexOf(item.name);
+			let index = selectedColors.indexOf(item.key);
 			if (index > -1) {
 				selectedColors.splice(index, 1);
 			} else {
-				selectedColors.push(item.name);
+				selectedColors.push(item.key);
 			}
 
 			return {
@@ -337,11 +281,11 @@ export default {
 			let selectedSizes = this.$route.query.size
 				? this.$route.query.size.split(',')
 				: [];
-			let index = selectedSizes.indexOf(item.size);
+			let index = selectedSizes.indexOf(item.key);
 			if (index > -1) {
 				selectedSizes.splice(index, 1);
 			} else {
-				selectedSizes.push(item.size);
+				selectedSizes.push(item.key);
 			}
 
 			return {
@@ -376,13 +320,13 @@ export default {
 		isActivedColor: function(item) {
 			return (
 				this.$route.query.color &&
-				this.$route.query.color.split(',').includes(item.name)
+				this.$route.query.color.split(',').includes(item.key)
 			);
 		},
 		isActivedSize: function(item) {
 			return (
 				this.$route.query.size &&
-				this.$route.query.size.split(',').includes(item.size)
+				this.$route.query.size.split(',').includes(item.key)
 			);
 		},
 		isActivedBrand: function(item) {

@@ -2,7 +2,7 @@
 	<div class="container">
 		<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 			<li class="active">
-				<a href="javascript:;">Shopping Cart</a>
+				<a href="javascript:;">Wunschliste</a>
 			</li>
 			<li>
 				<nuxt-link to="/pages/checkout">Checkout</nuxt-link>

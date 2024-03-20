@@ -40,13 +40,13 @@
 						<i class="icon-user-2"></i>
 					</a>
 
-					<nuxt-link
+					<!--nuxt-link
 						to="/pages/wishlist"
 						class="header-icon"
 						title="wishlist"
 					>
 						<i class="icon-wishlist-2"></i>
-					</nuxt-link>
+					</nuxt-link-->
 
 					<pv-cart-menu></pv-cart-menu>
 				</div>

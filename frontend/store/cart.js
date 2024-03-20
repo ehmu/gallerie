@@ -31,7 +31,7 @@ export const actions = {
 
         this._vm.$notify( {
             group: 'addCartSuccess',
-            text: `has been added to your cart!`,
+            text: `wurde Ihrer Wunschliste hinzugefügt!`,
             data: payload.product
         } );
     },

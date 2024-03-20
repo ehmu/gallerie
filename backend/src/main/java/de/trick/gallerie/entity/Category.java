@@ -21,6 +21,20 @@ public class Category extends AbstractEntity{
     @JoinTable(name = "category_products", joinColumns = @JoinColumn(name = "category_id"), inverseJoinColumns = @JoinColumn( name="product_id"))
     private Set<Product> products = new HashSet<>();
 
+    @Transient
+    private String slug;
+
+    @Transient
+    private Integer counts;
+
+    public String getSlug() {
+        return String.valueOf(this.getId());
+    }
+
+    public Integer getCounts() {
+        return this.products.size();
+    }
+
     public String getName() {
         return name;
     }
@@ -52,4 +66,6 @@ public class Category extends AbstractEntity{
     public void setProducts(Set<Product> products) {
         this.products = products;
     }
+
+
 }

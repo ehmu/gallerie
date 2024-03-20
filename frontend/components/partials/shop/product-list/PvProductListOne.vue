@@ -85,7 +85,7 @@
           class="toolbox-item toolbox-sort"
           v-if="!isOffCanvas"
         >
-          <label>Sort By:</label>
+          <label>Sortiere nach:</label>
 
           <div class="select-custom">
             <select
@@ -97,12 +97,9 @@
               <option
                 value="default"
                 selected="default"
-              >Default sorting</option>
-              <option value="featured">Sort by popularity</option>
-              <option value="rating">Sort by average rating</option>
-              <option value="new">Sort by newness</option>
-              <option value="price-asc">Sort by price: low to high</option>
-              <option value="price-dec">Sort by price: high to low</option>
+              >Standard</option>
+              <option value="rating">Höchste Bewertung</option>
+              <option value="new">Neueste zuerst</option>
             </select>
           </div>
         </div>
@@ -139,7 +136,7 @@
           class="toolbox-item toolbox-show"
           v-if="totalCount > 0"
         >
-          <label>Show:</label>
+          <label>Anzeige:</label>
 
           <div class="select-custom">
             <select
@@ -156,7 +153,7 @@
           </div>
         </div>
 
-        <div class="toolbox-item layout-modes">
+        <!--div class="toolbox-item layout-modes">
           <nuxt-link
             to="/shop"
             class="layout-btn btn-grid"
@@ -173,7 +170,7 @@
           >
             <i class="icon-mode-list"></i>
           </nuxt-link>
-        </div>
+        </div-->
       </div>
     </nav>
 
@@ -211,7 +208,7 @@
 
       <template v-if="products && products.length === 0">
         <div class="info-box with-icon p-0 shop-info mb-2">
-          <p>No products were found matching your selection.</p>
+          <p>Keine passenden Bilder gefunden.</p>
         </div>
       </template>
 

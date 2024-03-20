@@ -5,12 +5,12 @@
 			class="breadcrumb-nav"
 		>
 
-			<div class="container" v-if="category">
+			<div class="container">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
 						<nuxt-link to="/">Home</nuxt-link>
 					</li>
-					<li class="breadcrumb-item active">{{category.name}}</li>
+					<li class="breadcrumb-item active">Bilder</li>
 				</ol>
 			</div>
 		</nav>
@@ -39,7 +39,8 @@
 						<pv-sidebar-filter-one
 							:category-list="categoryList"
 							:featured-products="featuredProducts"
-							v-if="featuredProducts.length > 0"
+              :shopSizes="shopSizes"
+              :shop-colors="shopColors"
 						></pv-sidebar-filter-one>
 
 						<div
@@ -81,13 +82,13 @@ export default {
 		return {
 			categoryList: [],
 			featuredProducts: [],
+      shopSizes: [],
+      shopColors: [],
 			baseSlider6: baseSlider6,
-			isSticky: false,
-      category: null
+			isSticky: false
 		};
 	},
 	mounted: function() {
-	  this.getCategory();
 		this.getCategoryLists();
 		this.resizeHandler();
 		window.addEventListener('resize', this.resizeHandler, {
@@ -98,14 +99,6 @@ export default {
 		window.removeEventListener('resize', this.resizeHandler);
 	},
 	methods: {
-    getCategory: function() {
-      Api.get(`${baseUrl}/shop`, {
-      })
-        .then(response => {
-        this.category = response.data;
-    })
-    .catch(error => ({ error: JSON.stringify(error) }));
-    },
 		getCategoryLists: function() {
 			Api.get(`${baseUrl}/shop/sidebar-list`, {
 				params: { demo: currentDemo }
@@ -113,6 +106,9 @@ export default {
 				.then(response => {
 					this.categoryList = response.data.sidebarList;
 					this.featuredProducts = response.data.featuredProducts;
+          this.shopSizes = response.data.shopSizes;
+          this.shopColors = response.data.shopColors;
+          console.log(response.data.shopColors);
 				})
 				.catch(error => ({ error: JSON.stringify(error) }));
 		},

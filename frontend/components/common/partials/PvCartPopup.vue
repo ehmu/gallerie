@@ -31,8 +31,8 @@
 				</div>
 
 				<div class="product-action">
-					<nuxt-link to="/pages/cart" class="btn viewcart">View Cart</nuxt-link>
-					<nuxt-link to="/pages/checkout" class="btn btn-dark checkout">Checkout</nuxt-link>
+					<nuxt-link to="/pages/cart" class="btn viewcart">Wunschliste</nuxt-link>
+					<nuxt-link to="/pages/checkout" class="btn btn-dark checkout">Anfrage</nuxt-link>
 				</div>
 
 				<button class="mfp-close" @click="props.close"></button>

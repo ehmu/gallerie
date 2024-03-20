@@ -7,7 +7,7 @@
 			role="button"
 			@click="showCartMenu"
 		>
-			<i class="icon-cart-thick"></i>
+			<i class="icon-wishlist-2"></i>
 			<span class="cart-count badge-circle">{{ totalCount }}</span>
 		</a>
 
@@ -25,7 +25,7 @@
 			>×</a>
 
 			<div class="dropdownmenu-wrapper custom-scrollbar">
-				<div class="dropdown-cart-header">Shopping Cart</div>
+				<div class="dropdown-cart-header">Wunschliste</div>
 
 				<template v-if="cartList.length > 0">
 					<div class="dropdown-cart-products">
@@ -77,18 +77,18 @@
 						<nuxt-link
 							to="/pages/cart"
 							class="btn btn-gray btn-block view-cart"
-						>View Cart</nuxt-link>
+						>Liste anzeigen</nuxt-link>
 						<nuxt-link
 							to="/pages/checkout"
 							class="btn btn-dark btn-block"
-						>Checkout</nuxt-link>
+						>Anfrage stellen</nuxt-link>
 					</div>
 				</template>
 
 				<p
 					v-else
 					class="cart-empty-text"
-				>No products in the cart.</p>
+				>Die Wunschliste ist leer.</p>
 			</div>
 		</div>
 	</div>

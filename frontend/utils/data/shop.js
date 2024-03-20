@@ -16,12 +16,20 @@ export const shopColors = [
         name: "indigo"
     },
     {
-        color: "#ab6e6e",
+      color: "#fffd1a",
+      name: "gelb"
+    },
+    {
+        color: "#d72b0e",
         name: "red"
     }
 ];
 
 export const shopSizes = [
+    {
+      size: "120x140",
+      name: "120 X 140"
+    },
     {
         size: "XL",
         name: "Extra Large"

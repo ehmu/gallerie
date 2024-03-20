@@ -43,7 +43,7 @@
           v-else
           @click="addCart"
         >
-          <i class="icon-shopping-cart"></i>
+          <i class="icon-wishlist-2"></i>
         </a>
       </div>
 
@@ -52,7 +52,7 @@
         class="btn-quickview"
         title="Quick View"
         @click="openQuickview"
-      >Quick View</a>
+      >Schnellansicht</a>
 
       <div
         class="product-countdown-container"

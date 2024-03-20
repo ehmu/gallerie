@@ -1,5 +1,7 @@
 package de.trick.gallerie.entity;
 
+import de.trick.gallerie.type.ColorType;
+import de.trick.gallerie.type.PicturesizeType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -28,13 +30,21 @@ public class Product extends AbstractEntity {
     @Column(name = "image_uuid")
     private Set<String> imageUuids = new HashSet<>();
 
+    private int ratings = 5;
+
+    @Enumerated(EnumType.STRING)
+    private PicturesizeType size;
+
+    @Enumerated(EnumType.STRING)
+    private ColorType color;
+
     @Transient
     private int stock = 1;
 
     @Transient
     private Set<Product> variants = new HashSet<>();
 
-    private int ratings = 5;
+
 
     public String getName() {
         return name;
@@ -106,5 +116,21 @@ public class Product extends AbstractEntity {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public PicturesizeType getSize() {
+        return size;
+    }
+
+    public void setSize(PicturesizeType size) {
+        this.size = size;
+    }
+
+    public ColorType getColor() {
+        return color;
+    }
+
+    public void setColor(ColorType color) {
+        this.color = color;
     }
 }

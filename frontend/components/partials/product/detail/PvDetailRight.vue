@@ -238,7 +238,7 @@ export default {
 		curIndex: function() {
 			if (this.curColor.name !== null && this.vSizes.length === 0) {
 				let index = this.product.variants.findIndex(
-					item => item.colors[0].color_name === this.curColor.name
+					item => item.shopColors[0].color_name === this.curColor.name
 				);
 				this.tIndex = index;
 				return index;
@@ -253,7 +253,7 @@ export default {
 			if (this.curColor.name !== null && this.curSize.name !== null) {
 				let index = this.product.variants.findIndex(
 					item =>
-						item.colors[0].color_name === this.curColor.name &&
+						item.shopColors[0].color_name === this.curColor.name &&
 						item.size[0].size_name === this.curSize.name
 				);
 				this.tIndex = index;
@@ -309,17 +309,17 @@ export default {
 						});
 				});
 
-			if (this.product.variants[0].colors[0])
+			if (this.product.variants[0].shopColors[0])
 				this.product.variants.forEach(item => {
 					if (
 						this.vColors.findIndex(
-							vColor => vColor.name === item.colors[0].color_name
+							vColor => vColor.name === item.shopColors[0].color_name
 						) === -1
 					)
 						this.vColors.push({
-							name: item.colors[0].color_name,
-							text: item.colors[0].color,
-							image: item.colors[0].color_thumbnail
+							name: item.shopColors[0].color_name,
+							text: item.shopColors[0].color,
+							image: item.shopColors[0].color_thumbnail
 						});
 				});
 		}
@@ -395,7 +395,7 @@ export default {
 			if (this.vSizes.length === 0) {
 				return (
 					this.product.variants.findIndex(
-						item => item.colors[0].color_name === color.name
+						item => item.shopColors[0].color_name === color.name
 					) === -1
 				);
 			}
@@ -411,7 +411,7 @@ export default {
 			return (
 				this.product.variants.findIndex(
 					item =>
-						item.colors[0].color_name === color.name &&
+						item.shopColors[0].color_name === color.name &&
 						item.size[0].size_name === size.name
 				) === -1
 			);

@@ -3,6 +3,8 @@ package de.trick.gallerie.service;
 import de.trick.gallerie.entity.Product;
 import de.trick.gallerie.repository.ProductRepository;
 import de.trick.gallerie.repository.ProductRepository;
+import de.trick.gallerie.type.ColorType;
+import de.trick.gallerie.type.PicturesizeType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -38,8 +40,11 @@ public class ProductService extends AbstractService{
     }
 
     @Transactional
-    public Page<Product> loadProducts(Integer page, Integer perPage, Boolean onlyActive, String orderBy){
-        Page<Product> result = productRepository.findAll(Specification.where(ProductRepository.isActive(onlyActive)), PageRequest.of(page, perPage, Sort.by(Sort.Direction.DESC, orderBy)));
+    public Page<Product> loadProducts(Integer page, Integer perPage, Boolean onlyActive, String orderBy, ColorType[] colors, PicturesizeType[] sizes, Integer categoryId){
+        Page<Product> result = productRepository.findAll(
+                Specification.where(ProductRepository.isActive(onlyActive)).and(ProductRepository.containsColors(colors).and(ProductRepository.containsSizes(sizes)).and(ProductRepository.hasCategory(categoryId))),
+                PageRequest.of(page, perPage, Sort.by(Sort.Direction.DESC, orderBy))
+        );
         return result;
     }
 
