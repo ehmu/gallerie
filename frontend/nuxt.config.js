@@ -12,7 +12,7 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Trick-Manufaktur'
+                    'Bildergallerie der kölner Künstlerin Martina Ehmann-Rick'
             },
             {
                 name: 'author',
@@ -20,7 +20,7 @@ export default {
             },
             {
                 name: 'keywords',
-                content: 'Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln, Bilder, Acryl, Abstrakte Kunst'
+                content: 'Trick-Manufaktur, Martina Ehmann-Rick, Künstlerin, Köln, Bilder, Acryl, Abstrakte Kunst, Ausstellung'
             },
             {
                 name: 'app-mobile-web-app-title',

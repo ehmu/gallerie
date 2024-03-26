@@ -13,6 +13,7 @@ const _202df766 = () => interopDefault(import('../pages/pages/checkout.vue' /* w
 const _2ecb9c32 = () => interopDefault(import('../pages/pages/contact-us.vue' /* webpackChunkName: "pages/pages/contact-us" */))
 const _7a5ed7ce = () => interopDefault(import('../pages/pages/forgot-password.vue' /* webpackChunkName: "pages/pages/forgot-password" */))
 const _07137c72 = () => interopDefault(import('../pages/pages/login.vue' /* webpackChunkName: "pages/pages/login" */))
+const _546d939f = () => interopDefault(import('../pages/pages/order-complete.vue' /* webpackChunkName: "pages/pages/order-complete" */))
 const _f1c9d568 = () => interopDefault(import('../pages/pages/wishlist.vue' /* webpackChunkName: "pages/pages/wishlist" */))
 const _2c45a0fb = () => interopDefault(import('../pages/shop/boxed-image.vue' /* webpackChunkName: "pages/shop/boxed-image" */))
 const _12068d1e = () => interopDefault(import('../pages/shop/boxed-slider.vue' /* webpackChunkName: "pages/shop/boxed-slider" */))
@@ -84,6 +85,10 @@ export const routerOptions = {
     path: "/pages/login",
     component: _07137c72,
     name: "pages-login"
+  }, {
+    path: "/pages/order-complete",
+    component: _546d939f,
+    name: "pages-order-complete"
   }, {
     path: "/pages/wishlist",
     component: _f1c9d568,

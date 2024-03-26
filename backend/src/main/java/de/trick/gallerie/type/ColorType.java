@@ -1,6 +1,8 @@
 package de.trick.gallerie.type;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ColorType {
@@ -32,5 +34,10 @@ public enum ColorType {
 
     public String getKey(){
         return this.toString();
+    }
+
+    @JsonCreator
+    public static ColorType forValues(@JsonProperty("name") String name, @JsonProperty("key") String key, @JsonProperty("color") String color) {
+        return ColorType.valueOf(key);
     }
 }

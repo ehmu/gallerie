@@ -3,13 +3,13 @@
 		<div class="container checkout-container">
 			<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 				<li>
-					<nuxt-link to="/pages/cart">Shopping Cart</nuxt-link>
+					<nuxt-link to="/pages/cart">Merkzettel</nuxt-link>
 				</li>
 				<li class="active">
-					<nuxt-link to="/pages/checkout">Checkout</nuxt-link>
+					<nuxt-link to="/pages/checkout">Anfrage stellen</nuxt-link>
 				</li>
 				<li class="disabled">
-					<a href="javascript:;">Order Complete</a>
+					<a href="javascript:;">Bestätigung</a>
 				</li>
 			</ul>
 
@@ -101,7 +101,7 @@
 					</vue-slide-toggle>
 				</div>
 
-				<div class="checkout-discount">
+				<!--div class="checkout-discount">
 					<h4>
 						Have a coupon?
 						<button
@@ -138,23 +138,24 @@
 							</div>
 						</div>
 					</vue-slide-toggle>
-				</div>
+				</div-->
 
 				<div class="row">
 					<div class="col-lg-7">
 						<ul class="checkout-steps">
 							<li>
-								<h2 class="step-title">Billing details</h2>
+								<h2 class="step-title">Ihre Kontaktdaten</h2>
 
 								<form
 									action="#"
 									id="checkout-form"
+                  @submit.prevent="submitContactForm"
 								>
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>
-													First name
+													Vorname
 													<abbr
 														class="required"
 														title="required"
@@ -164,6 +165,7 @@
 													type="text"
 													class="form-control"
 													required
+                          v-model="contactForm.vorname"
 												/>
 											</div>
 										</div>
@@ -171,7 +173,7 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label>
-													Last name
+													Nachname
 													<abbr
 														class="required"
 														title="required"
@@ -181,46 +183,15 @@
 													type="text"
 													class="form-control"
 													required
+                          v-model="contactForm.nachname"
 												/>
 											</div>
 										</div>
 									</div>
 
-									<div class="form-group">
-										<label>Company name (optional)</label>
-										<input
-											type="text"
-											class="form-control"
-										/>
-									</div>
-
-									<div class="select-custom">
+									<!--div class="form-group mb-1 pb-2">
 										<label>
-											Country / Region
-											<abbr
-												class="required"
-												title="required"
-											>*</abbr>
-										</label>
-										<select
-											name="orderby"
-											class="form-control"
-										>
-											<option
-												value
-												selected="selected"
-											>Vanuatu</option>
-											<option value="1">Brunei</option>
-											<option value="2">Bulgaria</option>
-											<option value="3">Burkina Faso</option>
-											<option value="4">Burundi</option>
-											<option value="5">Cameroon</option>
-										</select>
-									</div>
-
-									<div class="form-group mb-1 pb-2">
-										<label>
-											Street address
+											Straße
 											<abbr
 												class="required"
 												title="required"
@@ -229,92 +200,60 @@
 										<input
 											type="text"
 											class="form-control"
-											placeholder="House number and street name"
+											placeholder=""
 											required
 										/>
 									</div>
 
-									<div class="form-group">
-										<input
-											type="text"
-											class="form-control"
-											placeholder="Apartment, suite, unite, etc. (optional)"
-											required
-										/>
-									</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>
+                          PLZ
+                          <abbr
+                            class="required"
+                            title="required"
+                          >*</abbr>
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label>
+                          Ort
+                          <abbr
+                            class="required"
+                            title="required"
+                          >*</abbr>
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div-->
 
 									<div class="form-group">
 										<label>
-											Town / City
-											<abbr
-												class="required"
-												title="required"
-											>*</abbr>
-										</label>
-										<input
-											type="text"
-											class="form-control"
-											required
-										/>
-									</div>
-
-									<div class="select-custom">
-										<label>
-											State / County
-											<abbr
-												class="required"
-												title="required"
-											>*</abbr>
-										</label>
-										<select
-											name="orderby"
-											class="form-control"
-										>
-											<option
-												value
-												selected="selected"
-											>NY</option>
-											<option value="1">Brunei</option>
-											<option value="2">Bulgaria</option>
-											<option value="3">Burkina Faso</option>
-											<option value="4">Burundi</option>
-											<option value="5">Cameroon</option>
-										</select>
-									</div>
-
-									<div class="form-group">
-										<label>
-											Postcode / Zip
-											<abbr
-												class="required"
-												title="required"
-											>*</abbr>
-										</label>
-										<input
-											type="text"
-											class="form-control"
-											required
-										/>
-									</div>
-
-									<div class="form-group">
-										<label>
-											Phone
-											<abbr
-												class="required"
-												title="required"
-											>*</abbr>
+											Telefon
 										</label>
 										<input
 											type="tel"
 											class="form-control"
-											required
+                      v-model="contactForm.telefon"
 										/>
 									</div>
 
 									<div class="form-group">
 										<label>
-											Email address
+											E-Mail
 											<abbr
 												class="required"
 												title="required"
@@ -324,10 +263,11 @@
 											type="email"
 											class="form-control"
 											required
+                      v-model="contactForm.email"
 										/>
 									</div>
 
-									<div class="form-group mb-1">
+									<!--div class="form-group mb-1">
 										<div class="custom-control custom-checkbox">
 											<input
 												type="checkbox"
@@ -343,9 +283,9 @@
 												@click="accountOpened = !accountOpened"
 											>Create an account?</label>
 										</div>
-									</div>
+									</div-->
 
-									<vue-slide-toggle :open="accountOpened">
+									<!--vue-slide-toggle :open="accountOpened">
 										<div class="form-group">
 											<label>
 												Create account password
@@ -361,9 +301,9 @@
 												required
 											/>
 										</div>
-									</vue-slide-toggle>
+									</vue-slide-toggle-->
 
-									<div class="form-group">
+									<!--div class="form-group">
 										<div class="custom-control custom-checkbox mt-0">
 											<input
 												type="checkbox"
@@ -383,9 +323,9 @@
 												address?
 											</label>
 										</div>
-									</div>
+									</div-->
 
-									<vue-slide-toggle :open="addressOpened">
+									<!--vue-slide-toggle-- :open="addressOpened">
 										<div class="shipping-info">
 											<div class="row">
 												<div class="col-md-6">
@@ -531,14 +471,20 @@
 												/>
 											</div>
 										</div>
-									</vue-slide-toggle>
+									</vue-slide-toggle-->
 
 									<div class="form-group">
-										<label class="order-comments">Order notes (optional)</label>
+										<label class="order-comments">Ihre Nachricht
+                      <abbr
+                        class="required"
+                        title="required"
+                      >*</abbr>
+                    </label>
 										<textarea
 											class="form-control"
-											placeholder="Notes about your order, e.g. special notes for delivery."
+											placeholder="Hier können Sie mir eine Mitteilung senden."
 											required
+                      v-model="contactForm.nachricht"
 										></textarea>
 									</div>
 								</form>
@@ -548,7 +494,7 @@
 
 					<div class="col-lg-5">
 						<div class="order-summary">
-							<h3>YOUR ORDER</h3>
+							<h3>ÜBERSICHT</h3>
 
 							<table class="table table-mini-cart">
 								<thead>
@@ -693,17 +639,16 @@
 								colspan="6"
 								class="px-3 py-2 text-center"
 							>
-								<p class="noproduct-msg mb-2">Checkout is not available while your cart is empty.</p>
-								<i class="icon-bag-2 cart-empty"></i>
+								<p class="noproduct-msg mb-2">Keine Bilder auf dem Merkzettel vorhanden.</p>
+								<i class="icon-wishlist-2 cart-empty"></i>
 							</td>
 						</tr>
 						<tr class="border-0 py-0">
 							<td
 								colspan="6"
-								class="px-3 py-2 text-center cart-empty"
+								class="px-3 py-2 text-center wishlist-empty"
 							>
-								No products added to the
-								cart
+
 							</td>
 						</tr>
 						<tr class="border-0 py-0">
@@ -714,7 +659,7 @@
 								<nuxt-link
 									to="/shop"
 									class="btn btn-go-shop"
-								>RETURN TO SHOP</nuxt-link>
+								>ZUR BILDERGALLERIE</nuxt-link>
 							</td>
 						</tr>
 					</tbody>
@@ -729,6 +674,7 @@
 <script>
 import { VueSlideToggle } from 'vue-slide-toggle';
 import { mapGetters } from 'vuex';
+import Api, { baseUrl, currentDemo } from '~/api';
 
 export default {
 	components: {
@@ -739,9 +685,34 @@ export default {
 			loginOpened: false,
 			codeOpened: false,
 			accountOpened: false,
-			addressOpened: false
+			addressOpened: false,
+      contactForm: Object,
 		};
 	},
+  methods: {
+    submitContactForm: function() {
+      Api.post(`${baseUrl}/shop/submitCart`,  {
+          vorname: this.contactForm.vorname,
+          nachname: this.contactForm.nachname,
+          email: this.contactForm.email,
+          telefon: this.contactForm.telefon,
+          nachricht: this.contactForm.nachricht,
+          products: this.cartList
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        console.log(response.data);
+        /*this.products = response.data.products;
+        this.totalCount = response.data.totalCount;
+        scrollTopHandler();
+        */
+      })
+      .catch(error => ({ error: JSON.stringify(error) }));
+    }
+  },
 	computed: {
 		...mapGetters('cart', ['cartList', 'totalCount', 'totalPrice'])
 	}

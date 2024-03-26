@@ -5,6 +5,7 @@ export default function ( { store } ) {
     let storage = localStorage.getItem( 'porto-vue' );
 
     if ( localStorage.currentDemo && localStorage.currentDemo != currentDemo ) {
+      alert("clear");
         localStorage.clear();
     }
 

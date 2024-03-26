@@ -15,7 +15,7 @@ export function getPrice ( product ) {
  * function to handle sticky header
  */
 export function showScrollTopHandler () {
-    if ( window.pageYOffset > 400 ) {
+    if ( window.pageYOffset > 150 ) {
         document.querySelector( '#scroll-top' ).classList.add( 'fixed' );
     } else {
         document.querySelector( '#scroll-top' ).classList.remove( 'fixed' );
@@ -52,7 +52,7 @@ export const resizeHandler = function () {
 
 
 export const stickyHeaderHandler = function () {
-    let top = 300;
+    let top = 150;
     if ( document.querySelector( '.header-transparent' ) ) {
         top = document.querySelector( '.header-transparent' ).offsetHeight;
     }

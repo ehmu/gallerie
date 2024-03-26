@@ -108,7 +108,6 @@ export default {
 					this.featuredProducts = response.data.featuredProducts;
           this.shopSizes = response.data.shopSizes;
           this.shopColors = response.data.shopColors;
-          console.log(response.data.shopColors);
 				})
 				.catch(error => ({ error: JSON.stringify(error) }));
 		},

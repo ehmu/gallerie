@@ -63,6 +63,13 @@
     "_name": "_07137c72"
   },
   {
+    "name": "pages-order-complete",
+    "path": "/pages/order-complete",
+    "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/order-complete.vue",
+    "chunkName": "pages/pages/order-complete",
+    "_name": "_546d939f"
+  },
+  {
     "name": "pages-wishlist",
     "path": "/pages/wishlist",
     "component": "/Users/dedi/workspaces/gallerie/frontend/pages/pages/wishlist.vue",

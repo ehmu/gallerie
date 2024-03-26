@@ -1,6 +1,8 @@
 package de.trick.gallerie.type;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum PicturesizeType {
@@ -26,6 +28,9 @@ public enum PicturesizeType {
 
     private String name;
 
+    private PicturesizeType(String name, String key){
+        this.name = name;
+    }
 
     private PicturesizeType(String name){
         this.name = name;
@@ -37,5 +42,10 @@ public enum PicturesizeType {
 
     public String getKey(){
         return this.toString();
+    }
+
+    @JsonCreator
+    public static PicturesizeType forValues(@JsonProperty("name") String name, @JsonProperty("key") String key) {
+        return PicturesizeType.valueOf(key);
     }
 }

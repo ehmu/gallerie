@@ -1,6 +1,7 @@
 package de.trick.gallerie.controller;
 
 
+import de.trick.gallerie.dto.CartDTO;
 import de.trick.gallerie.dto.ProductListDTO;
 import de.trick.gallerie.dto.SidebarDTO;
 import de.trick.gallerie.entity.Product;
@@ -13,11 +14,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -35,7 +34,7 @@ public class ShopController {
 
 
     @GetMapping(path = "/sidebar-list")
-    public ResponseEntity<SidebarDTO> getSidebar() throws IOException {
+    public ResponseEntity<SidebarDTO> getSidebar() {
         SidebarDTO sidebar = new SidebarDTO();
         sidebar.getFeaturedProducts().add(new Product());
         sidebar.getSidebarList().addAll(this.categoryService.loadCategories(true));
@@ -58,6 +57,13 @@ public class ShopController {
         result.get().forEach(product -> productList.getProducts().add(product));
         productList.setTotalCount((int) result.getTotalElements());
         ResponseEntity<ProductListDTO> responseEntity = ResponseEntity.ok().body(productList);
+        return responseEntity;
+    }
+
+    @PostMapping(path = "/submitCart", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<String> submitCart(@RequestBody CartDTO cartDTO) {
+        LOG.info(cartDTO.getNachricht());
+        ResponseEntity<String> responseEntity = ResponseEntity.ok().body("Alles toll");
         return responseEntity;
     }
 
