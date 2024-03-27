@@ -2,6 +2,7 @@
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const UPDATE_CART = 'UPDATE_CART';
+export const DELETE_CART = 'DELETE_CART';
 
 export function state() {
     return {
@@ -40,6 +41,9 @@ export const actions = {
     },
     updateCart: function ( { commit }, payload ) {
         commit( UPDATE_CART, payload );
+    },
+    deleteCart: function ( { commit } ) {
+      commit( DELETE_CART );
     }
 }
 
@@ -72,5 +76,8 @@ export const mutations = {
     },
     [ UPDATE_CART ]( state, payload ) {
         state.data = payload.cartItems;
+    },
+    [ DELETE_CART ]( state ) {
+      state.data = [];
     }
 }

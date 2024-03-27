@@ -63,7 +63,7 @@ public class ShopController {
     @PostMapping(path = "/submitCart", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<String> submitCart(@RequestBody CartDTO cartDTO) {
         LOG.info(cartDTO.getNachricht());
-        ResponseEntity<String> responseEntity = ResponseEntity.ok().body("Alles toll");
+        ResponseEntity<String> responseEntity = ResponseEntity.ok().body("Vielen Dank für Ihre Anfrage, ich werde mich schnellsmöglich melden.");
         return responseEntity;
     }
 

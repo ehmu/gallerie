@@ -13,8 +13,8 @@
 				</li>
 			</ul>
 
-			<template v-if="cartList.length > 0">
-				<div class="login-form-container">
+			<template v-if="cartList.length > 0 && showSuccess == false">
+				<!--div class="login-form-container">
 					<h4>
 						Returning customer?
 						<button
@@ -99,7 +99,7 @@
 							</div>
 						</div>
 					</vue-slide-toggle>
-				</div>
+				</div-->
 
 				<!--div class="checkout-discount">
 					<h4>
@@ -497,17 +497,23 @@
 							<h3>ÜBERSICHT</h3>
 
 							<table class="table table-mini-cart">
-								<thead>
-									<tr>
-										<th colspan="2">Product</th>
-									</tr>
-								</thead>
 								<tbody v-if="cartList.length > 0">
 									<tr
 										v-for="(product, index) in cartList"
 										:key="'cart-product-' + index"
 									>
-										<td class="product-col">
+                    <td>
+                      <figure class="product-image-container">
+                          <img
+                            :src="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
+                            :width="100"
+                            :height="100"
+                            alt="product"
+                          />
+                      </figure>
+                    </td>
+
+                    <td class="product-col">
 											<h2 class="product-title">
 												{{product.name}} ×
 												<span class="product-qty">{{product.qty}}</span>
@@ -520,10 +526,10 @@
 									</tr>
 								</tbody>
 								<tbody v-else>
-									<p class="cart-empty-text ml-3">No products in the cart.</p>
+									<p class="cart-empty-text ml-3">Keine Bilder in der Liste.</p>
 								</tbody>
 								<tfoot>
-									<tr class="cart-subtotal">
+									<!--tr class="cart-subtotal">
 										<td>
 											<h4>Subtotal</h4>
 										</td>
@@ -573,11 +579,11 @@
 												<span>${{ totalPrice | priceFormat }}</span>
 											</b>
 										</td>
-									</tr>
+									</tr-->
 								</tfoot>
 							</table>
 
-							<div class="payment-methods">
+							<!--div class="payment-methods">
 								<h4 class>Payment methods</h4>
 								<div class="info-box with-icon p-0">
 									<p>
@@ -587,17 +593,65 @@
 										to make alternate arrangements.
 									</p>
 								</div>
-							</div>
+							</div-->
 
 							<button
 								type="submit"
 								class="btn btn-dark btn-place-order"
 								form="checkout-form"
-							>Place order</button>
+							>ANFRAGE ABSCHICKEN</button> <div class="alert-danger">{{returnMessage}}</div>
 						</div>
 					</div>
 				</div>
 			</template>
+
+      <div
+        class="box-content"
+        v-else-if="showSuccess == true"
+      >
+        <table
+          class="table-cart"
+          data-pagination="no"
+          data-per-page="5"
+          data-page="1"
+          data-id
+          data-token
+        >
+
+          <tbody class="cart-items-wrapper">
+          <tr class="border-0 py-0">
+            <td
+              colspan="6"
+              class="px-3 py-2 text-center"
+            >
+              <p class="noproduct-msg mb-2">{{returnMessage}}</p>
+              <i class="icon-wishlist-2 cart-empty"></i>
+            </td>
+          </tr>
+          <tr class="border-0 py-0">
+            <td
+              colspan="6"
+              class="px-3 py-2 text-center wishlist-empty"
+            >
+
+            </td>
+          </tr>
+          <tr class="border-0 py-0">
+            <td
+              colspan="6"
+              class="px-3 text-center"
+            >
+              <nuxt-link
+                to="/shop"
+                class="btn btn-go-shop"
+              >ZUR BILDERGALLERIE</nuxt-link>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="mb-6"></div>
+      </div>
 
 			<div
 				class="box-content"
@@ -673,8 +727,9 @@
 
 <script>
 import { VueSlideToggle } from 'vue-slide-toggle';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import Api, { baseUrl, currentDemo } from '~/api';
+import { scro, scrollTop } from '~/utils';
 
 export default {
 	components: {
@@ -687,9 +742,13 @@ export default {
 			accountOpened: false,
 			addressOpened: false,
       contactForm: Object,
+      showSuccess: false,
+      returnMessage: null,
+      baseUrl: baseUrl
 		};
 	},
   methods: {
+    ...mapActions('cart', ['updateCart', 'removeFromCart', 'deleteCart']),
     submitContactForm: function() {
       Api.post(`${baseUrl}/shop/submitCart`,  {
           vorname: this.contactForm.vorname,
@@ -704,13 +763,15 @@ export default {
         }
       })
       .then(response => {
-        console.log(response.data);
-        /*this.products = response.data.products;
-        this.totalCount = response.data.totalCount;
-        scrollTopHandler();
-        */
+        this.showSuccess = true;
+        this.returnMessage = response.data;
+        this.deleteCart();
+        scrollTop();
       })
-      .catch(error => ({ error: JSON.stringify(error) }));
+      .catch(error => {
+          console.log(error)
+          this.returnMessage = error.message;
+      });
     }
   },
 	computed: {
