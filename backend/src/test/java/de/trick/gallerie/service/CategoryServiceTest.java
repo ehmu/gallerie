@@ -30,7 +30,7 @@ class CategoryServiceTest {
             category.setActive(true);
             category.setDescription("Ich bin die Beschreibung von Kategorie " + i);
             Random random = new Random();
-            int anzahlProdukte = random.ints(1, 10).findFirst().getAsInt();
+            int anzahlProdukte = random.ints(1, 15).findFirst().getAsInt();
             for(int a = 1; a<= anzahlProdukte; a++){
                 Product product = new Product();
                 product.setName("Bildname "  + random.ints(1, 400).findFirst().getAsInt());

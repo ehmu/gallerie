@@ -30,7 +30,6 @@ E-Mail: ${(cart.email)!}<br>
 Nachricht an dich: ${(cart.nachricht)!}<br>
 
 <br>
-Setze dich am Besten gleich mit dem Interessenten in Verbindung!<br>
 <br>
 Ihre trick-manufaktur<br>
 <br>
