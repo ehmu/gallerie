@@ -204,7 +204,7 @@ export default {
 		};
 	},
 	watch: {
-		$route: function() {console.log("fsfsw")
+		$route: function() {
 			this.getFlag();
 
 			if (this.$route.query.min_price) {

@@ -236,7 +236,7 @@
       v-if="products && products.length > 0"
     >
       <div class="toolbox-item toolbox-show mb-0">
-        <label>Anzeige:</label>
+        <!--label>Anzeige:</label>
 
         <div class="select-custom">
           <select
@@ -250,7 +250,7 @@
             <option :value="24">24</option>
             <option :value="36">36</option>
           </select>
-        </div>
+        </div-->
       </div>
 
       <pv-pagination
@@ -274,8 +274,9 @@
   import PvProductTwo from '~/components/features/product/PvProductTwo';
   import PvProductThree from '~/components/features/product/PvProductThree';
   import PvPagination from '~/components/features/PvPagination';
-  import { scro, scrollTopHandler } from '~/utils';
+  //import { scro, scrollTopHandler } from '~/utils';
   import Api, { baseUrl, currentDemo } from '~/api';
+  import { scro, scrollTop } from '~/utils';
 
   export default {
     components: {
@@ -334,7 +335,7 @@
     methods: {
       getProducts: function() {
         this.products = null;
-        this.totalCount = 0;
+        this.totalCount = null;
         Api.get(`${baseUrl}/shop`, {
           params: {
             ...this.$route.query,
@@ -346,7 +347,7 @@
       .then(response => {
           this.products = response.data.products;
         this.totalCount = response.data.totalCount;
-        scrollTopHandler();
+        scrollTop();
       })
       .catch(error => ({ error: JSON.stringify(error) }));
       },

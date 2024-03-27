@@ -99,7 +99,7 @@ export default {
 				(0 < this.totalCount % this.itemsPerPage ? 1 : 0);
 			this.pageNumbers = [];
 
-			for (let i = -1; i < 2 && this.totalPage >= 3; i++) {
+			for (let i = -1; i < 2 && this.totalPage >= 100; i++) {
 				if (1 < this.currentPage && this.currentPage < this.totalPage)
 					this.pageNumbers.push(this.currentPage + i);
 				if (1 === this.currentPage)
@@ -109,7 +109,7 @@ export default {
 				}
 			}
 
-			for (let i = 0; i < this.totalPage && this.totalPage < 3; i++) {
+			for (let i = 0; i < this.totalPage && this.totalPage < 100; i++) {
 				this.pageNumbers.push(i + 1);
 			}
 		},

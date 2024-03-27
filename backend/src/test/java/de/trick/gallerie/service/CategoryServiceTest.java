@@ -30,12 +30,12 @@ class CategoryServiceTest {
             category.setActive(true);
             category.setDescription("Ich bin die Beschreibung von Kategorie " + i);
             Random random = new Random();
-            int anzahlProdukte = random.ints(1, 4).limit(7).findFirst().getAsInt();
+            int anzahlProdukte = random.ints(1, 10).findFirst().getAsInt();
             for(int a = 1; a<= anzahlProdukte; a++){
                 Product product = new Product();
-                product.setName("Produkt "  + a);
-                product.setDescription("Beschreibung Produkt " + a);
-                product.getImageUuids().add("eee-ddd-ccc-" + a);
+                product.setName("Bildname "  + random.ints(1, 400).findFirst().getAsInt());
+                product.setDescription("Beschreibung Bild " + product.getName());
+                product.getImageUuids().add("eee-ddd-ccc-" + random.ints(1, 7).findFirst().getAsInt());
                 product.setCreatedAt(new Date());
                 product.setActive(true);
                 product.setSize(PicturesizeType.S60X60);
@@ -44,9 +44,20 @@ class CategoryServiceTest {
                 category.getProducts().add(product);
 
                 product = new Product();
-                product.setName("Produkt "  + a+2);
-                product.setDescription("Beschreibung Produkt " + a+2);
-                product.getImageUuids().add("eee-ddd-ccc-" + a);
+                product.setName("Bildname "  + random.ints(1, 400).findFirst().getAsInt());
+                product.setDescription("Beschreibung Produkt " + product.getName());
+                product.getImageUuids().add("eee-ddd-ccc-" + random.ints(1, 7).findFirst().getAsInt());
+                product.setCreatedAt(new Date());
+                product.setActive(true);
+                product.setSize(PicturesizeType.S40X40);
+                product.setColor(ColorType.YELLOW);
+                categoryService.save(product);
+                category.getProducts().add(product);
+
+                product = new Product();
+                product.setName("Bildname "  + random.ints(1, 400).findFirst().getAsInt());
+                product.setDescription("Beschreibung Bild " + product.getName());
+                product.getImageUuids().add("eee-ddd-ccc-" + random.ints(1, 8).findFirst().getAsInt());
                 product.setCreatedAt(new Date());
                 product.setActive(true);
                 product.setSize(PicturesizeType.S40X40);
@@ -54,16 +65,6 @@ class CategoryServiceTest {
                 categoryService.save(product);
                 category.getProducts().add(product);
 
-                product = new Product();
-                product.setName("Produkt "  + a+3);
-                product.setDescription("Beschreibung Produkt " + a+3);
-                product.getImageUuids().add("eee-ddd-ccc-" + a);
-                product.setCreatedAt(new Date());
-                product.setActive(true);
-                product.setSize(PicturesizeType.S80X120);
-                product.setColor(ColorType.BLACK);
-                categoryService.save(product);
-                category.getProducts().add(product);
             }
             this.categoryService.saveCategory(category);
         }
