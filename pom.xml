@@ -3,13 +3,13 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.trick.category</groupId>
-	<artifactId>trick-category</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>de.trick.gallerie</groupId>
+	<artifactId>trick-gallerie</artifactId>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>tina-category</name>
-	<description>Tinas Category</description>
+	<name>tina-gallerie</name>
+	<description>Tinas Gallerie</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -26,6 +26,7 @@
     </properties>
 	
 	<modules>
+		<module>modules/mailConnector</module>
         <module>frontend</module>
         <module>backend</module>
     </modules>

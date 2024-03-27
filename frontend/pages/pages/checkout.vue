@@ -769,8 +769,7 @@ export default {
         scrollTop();
       })
       .catch(error => {
-          console.log(error)
-          this.returnMessage = error.message;
+          this.returnMessage = error.response.data;
       });
     }
   },
