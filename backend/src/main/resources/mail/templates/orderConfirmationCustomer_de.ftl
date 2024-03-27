@@ -3,18 +3,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-Sehr geehrter Kunde,<br>
+Hallo ${(cart.vorname)!},<br>
 <br>
-Ihr Auftrag mit der Nummer '${(cart.vorname)!}' ist bei uns eingegangen.<br>
-Im Anhang finden Sie eine detaillierte Bestellbestätigung.<br>
-Sobald die Ware verschickt wird, erhalten Sie eine separate E-Mail mit den Daten zur Sendung.<br>
-Sollten Sie Fragen zu Ihrer Bestellung haben, antworten Sie einfach auf diese E-Mail, rufen Sie uns an oder
-nutzen Sie unser Kontaktformular auf unserer Webseite.
+Deine Anfrage wurde erfolgreich übermittelt.<br>
+Es freut mich das Du Interesse an folgenden Bildern hast: <br>
+<br>
+<table cellpadding="5" border="1">
+    <#list cart.products as product>
+        <tr>
+            <td>
+                <img src="${baseUrl}${product.imagePaths[0]}" width="200px" alt="${product.name}"/><br>
+            </td>
+            <td>
+                Name: ${product.name}<br>
+                Größe: ${product.size}
+            </td>
+        </tr>
+    </#list>
+</table>
+<br>
+Ich werde mich schnellstmöglich mit Dir in Verbindung setzen.<br>
 
 <br>
-Vielen Dank für Ihren Auftrag!<br>
+Viele Grüße<br>
 <br>
-Ihre trick-manufaktur<br>
+Tina Ehmann-Rick<br>
 <br>
 trick-manufaktur<br>
 Ginsterweg 3<br>

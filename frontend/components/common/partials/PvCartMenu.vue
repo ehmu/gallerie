@@ -25,7 +25,7 @@
 			>×</a>
 
 			<div class="dropdownmenu-wrapper custom-scrollbar">
-				<div class="dropdown-cart-header">Wunschliste</div>
+				<div class="dropdown-cart-header">Merkliste</div>
 
 				<template v-if="cartList.length > 0">
 					<div class="dropdown-cart-products">
@@ -39,16 +39,16 @@
 									<nuxt-link :to="'/product/default/' + product.slug">{{ product.name }}</nuxt-link>
 								</h4>
 
-								<span class="cart-product-info">
+								<!--span class="cart-product-info">
 									<span class="cart-product-qty">{{ product.qty }}</span>
 									× {{ product.price | priceFormat }}
-								</span>
+								</span-->
 							</div>
 
 							<figure class="product-image-container">
 								<nuxt-link :to="'/product/default/' + product.slug">
 									<img
-										v-lazy="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
+										v-lazy="`${baseUrl}${product.imagePaths[0]}`"
 										alt="product"
 										:width="50"
 										:height="50"
@@ -67,11 +67,11 @@
 						</div>
 					</div>
 
-					<div class="dropdown-cart-total">
+					<!--div class="dropdown-cart-total">
 						<span>TOTAL:</span>
 
 						<span class="cart-total-price float-right">{{ totalPrice | priceFormat }}</span>
-					</div>
+					</div-->
 
 					<div class="dropdown-cart-action">
 						<nuxt-link
@@ -88,7 +88,7 @@
 				<p
 					v-else
 					class="cart-empty-text"
-				>Die Wunschliste ist leer.</p>
+				>Die Merkliste ist leer.</p>
 			</div>
 		</div>
 	</div>

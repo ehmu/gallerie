@@ -9,7 +9,7 @@
     <div v-for="(category, index) in categories" :key="category.id" class="home-slide home-slide1 banner d-flex align-items-center swiper-slide">
       <img
         class="slide-bg"
-        :src="baseUrl + '/dokumente/downloadDokument/' + category.products[0].imageUuids[0]"
+        :src="baseUrl + category.products[0].imagePaths[0]"
         alt="slider image"
         width="1903"
         height="970"

@@ -5,11 +5,32 @@
 <body>
 Hallo Tina,<br>
 <br>
-Ein Auftrag mit der Nummer '${(cart.vorname)!}' ist eingegangen.<br>
-Im Anhang findest du eine detaillierte Bestellbestätigung.<br>
+Eine neue Anfrage für die folgenden Bilder wurde gestellt.<br>
+<br>
+
+<table cellpadding="5" border="1">
+    <#list cart.products as product>
+        <tr>
+            <td>
+            <img src="${baseUrl}${product.imagePaths[0]}" width="200px" alt="${product.name}"/><br>
+            </td>
+            <td>
+                Name: ${product.name}<br>
+                Größe: ${product.size}
+            </td>
+        </tr>
+    </#list>
+</table>
 
 <br>
-Vielen Dank für Ihren Auftrag!<br>
+Der Interessent hat folgende Angaben gemacht:<br><br>
+Name: ${(cart.vorname)!} ${(cart.nachname)!}<br>
+Telefon: ${(cart.telefon)!}<br>
+E-Mail: ${(cart.email)!}<br>
+Nachricht an dich: ${(cart.nachricht)!}<br>
+
+<br>
+Setze dich am Besten gleich mit dem Interessenten in Verbindung!<br>
 <br>
 Ihre trick-manufaktur<br>
 <br>

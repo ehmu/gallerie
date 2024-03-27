@@ -13,7 +13,7 @@
 					<figure class="product-media">
 						<nuxt-link :to="'/product/default' + props.item.data.slug">
 							<img
-								:src="`${baseUrl}/dokumente/downloadDokument/${props.item.data.imageUuids[0]}`"
+								:src="`${baseUrl}${props.item.data.imagePaths[0]}`"
 								alt="product"
 								:width="50"
 								:height="50"
@@ -31,7 +31,7 @@
 				</div>
 
 				<div class="product-action">
-					<nuxt-link to="/pages/cart" class="btn viewcart">Wunschliste</nuxt-link>
+					<nuxt-link to="/pages/cart" class="btn viewcart">Merkliste</nuxt-link>
 					<nuxt-link to="/pages/checkout" class="btn btn-dark checkout">Anfrage</nuxt-link>
 				</div>
 

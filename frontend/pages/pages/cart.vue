@@ -2,7 +2,7 @@
 	<div class="container">
 		<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 			<li class="active">
-				<a href="javascript:;">Wunschliste</a>
+				<a href="javascript:;">Merkliste</a>
 			</li>
 			<li>
 				<nuxt-link to="/pages/checkout">Anfrage stellen</nuxt-link>
@@ -24,9 +24,9 @@
 							<tr>
 								<th class="thumbnail-col"></th>
 								<th class="product-col">Name</th>
-								<th class="price-col">Preis</th>
-								<th class="qty-col">Anzahl</th>
-								<th class="text-right">Total</th>
+								<th class="price-col">Beschreibung</th>
+								<th class="qty-col"></th>
+								<th class="text-right"></th>
 							</tr>
 						</thead>
 
@@ -43,7 +43,7 @@
 											class="product-image"
 										>
 											<img
-												:src="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
+												:src="`${baseUrl}${product.imagePaths[0]}`"
 												:width="100"
 												:height="100"
 												alt="product"
@@ -65,7 +65,9 @@
 									</h5>
 								</td>
 
-								<td>{{ product.price | priceFormat }}</td>
+                <td colspan="3">{{ product.description }}</td>
+
+								<!--td>{{ product.price | priceFormat }}</td>
 
 								<td>
 									<pv-quantity-input
@@ -77,7 +79,7 @@
 
 								<td class="text-right">
 									<span class="subtotal-price">{{ product.price * product.qty | priceFormat }}</span>
-								</td>
+								</td-->
 							</tr>
 						</tbody>
 
@@ -127,7 +129,11 @@
 
 			<div class="col-lg-4">
 				<div class="cart-summary">
-					<h3>Übersicht</h3>
+					<h4>WOLLEN SIE MEHR WISSEN?</h4>
+          Falls Sie Interesse an meinen Bildern haben und Kontakt mit mir aufnehmen möchten,
+          können Sie mir gerne Ihre Auswahl schicken. Klicken Sie hierfür auf "Anfrage stellen"
+          und geben Sie anschließend Ihre Kontaktdaten ein. <br>
+          Ich melde mich schnellstmöglich bei Ihnen!
 
 					<table class="table table-totals">
 						<!--tbody>
@@ -217,12 +223,12 @@
 							</tr>
 						</tbody-->
 
-						<tfoot>
+						<!--tfoot>
 							<tr>
 								<td>Total</td>
 								<td>{{ totalPrice | priceFormat }}</td>
 							</tr>
-						</tfoot>
+						</tfoot-->
 					</table>
 
 					<div class="checkout-methods">

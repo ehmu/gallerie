@@ -32,9 +32,18 @@ export const actions = {
 
         this._vm.$notify( {
             group: 'addCartSuccess',
-            text: `wurde Ihrer Wunschliste hinzugefügt!`,
+            text: `wurde Ihrer Merkliste hinzugefügt!`,
             data: payload.product
         } );
+    },
+    disaddFromCart: function ( { commit }, payload ) {
+      commit( REMOVE_FROM_CART, payload );
+
+      this._vm.$notify( {
+        group: 'addCartSuccess',
+        text: `wurde von Ihrer Merkliste entfernt`,
+        data: payload.product
+      } );
     },
     removeFromCart: function ( { commit }, payload ) {
         commit( REMOVE_FROM_CART, payload );

@@ -11,10 +11,10 @@
                 class="product-single-carousel show-nav-hover"
                 :options="baseSlider1"
             >
-                <div class="swiper-slide" v-for="item in product.imageUuids" :key="item">
+                <div class="swiper-slide" v-for="item in product.imagePaths" :key="item">
                     <img
                         class="product-single-image"
-                        v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
+                        v-lazy="`${baseUrl}${item}`"
                         :width="500"
                         :height="500"
                         alt="lgPicture"
@@ -35,13 +35,13 @@
         >
             <div
                 class="swiper-dot swiper-slide"
-                v-for="(item,index) in product.imageUuids"
+                v-for="(item,index) in product.imagePaths"
                 :key="'media-one' + index"
                 @click="activeThumbItem(index, $event)"
                 :class="{ active : index === 0 }"
             >
                 <img
-                    v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
+                    v-lazy="`${baseUrl}${item}`"
                     :width="500"
                     :height="500"
                     alt="product-thumbnail"
@@ -80,12 +80,12 @@ export default {
 	},
 	computed: {
 		lightBoxMedia: function () {
-			return this.product.imageUuids.reduce( ( acc, cur ) => {
+			return this.product.imagePaths.reduce( ( acc, cur ) => {
 				return [
 					...acc,
 					{
-						src: `${ baseUrl }/dokumente/downloadDokument/${ cur }`,
-						thumb: `${ baseUrl }/dokumente/downloadDokument/${ cur }`
+						src: `${ baseUrl }${ cur }`,
+						thumb: `${ baseUrl }${ cur }`
 					}
 				];
 			}, [] );

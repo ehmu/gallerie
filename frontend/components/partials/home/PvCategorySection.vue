@@ -15,7 +15,7 @@
 				<nuxt-link :to="'/shop?category=' + category.uuid">
 					<figure>
 						<img
-              v-lazy="baseUrl + '/dokumente/downloadDokument/' + category.products[0].imageUuids[0]"
+              v-lazy="baseUrl + category.products[0].imagePaths[0]"
 							alt="category"
 							width="273"
 							height="273"

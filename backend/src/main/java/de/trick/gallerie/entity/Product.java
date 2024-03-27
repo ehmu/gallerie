@@ -47,6 +47,9 @@ public class Product extends AbstractEntity {
     @Transient
     private String slug;
 
+    @Transient
+    private Set<String> imagePaths = new HashSet<>();
+
     public String getName() {
         return name;
     }
@@ -141,5 +144,10 @@ public class Product extends AbstractEntity {
 
     public void setSlug(String slug) {
         this.slug = slug;
+    }
+
+    public Set<String> getImagePaths(){
+        this.getImageUuids().forEach(uuid -> imagePaths.add("/dokumente/downloadDokument/" + uuid));
+        return imagePaths;
     }
 }

@@ -3,9 +3,9 @@
     <figure class="img-effect">
       <nuxt-link :to="`/product/default/${product.slug}`">
         <img
-          v-for="(item,index) in product.imageUuids.slice(0,2)"
+          v-for="(item,index) in product.imagePaths.slice(0,2)"
           :key="`related-large-${index}`"
-          v-lazy="`${baseUrl}/dokumente/downloadDokument/${item}`"
+          v-lazy="`${baseUrl}${item}`"
           alt="large-picture"
           :width="item.width"
           :height="item.height"
@@ -28,23 +28,25 @@
       </div>
 
       <div class="btn-icon-group">
-        <nuxt-link
-          :to="'/product/default/' + product.slug"
-          class="btn-icon btn-add-cart"
-          v-if="product.variants.length > 0"
-          key="variantProduct"
-        >
-          <i class="fa fa-arrow-right"></i>
-        </nuxt-link>
 
         <a
           href="javascript:;"
           class="btn-icon btn-add-cart product-type-simple"
-          v-else
+          v-if="!isInCart"
           @click="addCart"
         >
           <i class="icon-wishlist-2"></i>
         </a>
+
+        <a
+          href="javascript:;"
+          class="btn-icon btn-add-cart product-type-simple"
+          v-else="isInCart"
+          @click="removeFromCart"
+        >
+          <i class="icon-wishlist"></i>
+        </a>
+
       </div>
 
       <a
@@ -78,24 +80,36 @@
 						<template v-if="index < product.product_categories.length - 1">,</template>
 					</span>
         </div>
-        <!-- <nuxt-link
-                    to="/pages/wishlist"
+
+                <!--nuxt-link
+                    to="/pages/cart"
                     class="btn-icon-wish added-wishlist"
-                    title="Go to Wishlist"
-                    v-if="isWishlisted"
+                    title="Zur Merkliste"
+                    v-if="isInCart"
                 >
                     <i class="icon-wishlist-2"></i>
-                </nuxt-link>
+                </nuxt-link-->
 
                 <a
                     href="javascript:;"
                     class="btn-icon-wish"
-                    title="Add to Wishlist"
-                    @click="addWishlist($event)"
-                    v-if="!isWishlisted"
+                    title="Auf die Merkliste"
+                    @click="addCart()"
+                    v-if="!isInCart"
                 >
                     <i class="icon-wishlist-2"></i>
-                </a>-->
+                </a>
+
+                <a
+                  href="javascript:;"
+                  class="btn-icon-wish added-wishlist"
+                  title="Auf die Merkliste"
+                  @click="removeFromCart"
+                  v-if="isInCart"
+                >
+                  <i class="icon-wishlist-2"></i>
+                </a>
+
       </div>
 
       <h3 class="product-title">
@@ -127,7 +141,7 @@
         </template>
       </div>
 
-      <div
+      <!--div
         class="price-box"
         v-else
       >
@@ -138,7 +152,7 @@
         <template v-else>
           <span class="product-price">{{ minPrice | priceFormat }}</span>
         </template>
-      </div>
+      </div-->
     </div>
   </div>
 </template>
@@ -170,9 +184,19 @@
     },
     computed: {
       ...mapGetters('wishlist', ['wishList']),
+      ...mapGetters('cart', ['cartList']),
     isWishlisted: function() {
       if (
         this.wishList.findIndex(
+          item => item.name === this.product.name
+      ) > -1
+    )
+      return true;
+      return false;
+    },
+    isInCart: function() {
+      if (
+        this.cartList.findIndex(
           item => item.name === this.product.name
       ) > -1
     )
@@ -192,7 +216,7 @@
   },
   methods: {
   ...mapActions('wishlist', ['addToWishlist']),
-  ...mapActions('cart', ['addToCart']),
+  ...mapActions('cart', ['addToCart', 'removeFromCart',]),
       openQuickview: function() {
       this.$modal.show(
         () => import('~/components/features/product/PvQuickview'),

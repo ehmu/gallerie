@@ -73,10 +73,8 @@ public class ShopController {
     public ResponseEntity<String> submitCart(@RequestBody CartDTO cartDTO) {
         LOG.info(cartDTO.getNachricht());
 
-        Map<String, Object> rootMap = new HashMap<String, Object>();
-        rootMap.put("cart", cartDTO);
         try {
-            //this.sendConfirmationMail(cartDTO, "mail/templates/orderConfirmationCustomer_de.ftl", cartDTO.getEmail(), environment.getRequiredProperty("mail.message.orderConfirmationCustomer.subject"));
+            this.sendConfirmationMail(cartDTO, "mail/templates/orderConfirmationCustomer_de.ftl", cartDTO.getEmail(), environment.getRequiredProperty("mail.message.orderConfirmationCustomer.subject"));
             this.sendConfirmationMail(cartDTO, "mail/templates/orderConfirmationShopowner_de.ftl", environment.getRequiredProperty("mail.message.orderConfirmationShopowner.receiver"), environment.getRequiredProperty("mail.message.orderConfirmationShopowner.subject"));
         }
         catch (Exception e){
@@ -89,6 +87,7 @@ public class ShopController {
     private void sendConfirmationMail(CartDTO cartDTO, String templateName, String receiver, String subject) throws Exception {
         Map<String, Object> rootMap = new HashMap<String, Object>();
         rootMap.put("cart", cartDTO);
+        rootMap.put("baseUrl", environment.getRequiredProperty("api.baseUrl"));
         try {
             this.mailService.sendMessage(templateName, rootMap, environment.getRequiredProperty("mail.message.orderConfirmation.sender"), receiver, subject);
         }

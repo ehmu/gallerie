@@ -3,7 +3,7 @@
 		<div class="container checkout-container">
 			<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 				<li>
-					<nuxt-link to="/pages/cart">Merkzettel</nuxt-link>
+					<nuxt-link to="/pages/cart">Merkliste</nuxt-link>
 				</li>
 				<li class="active">
 					<nuxt-link to="/pages/checkout">Anfrage stellen</nuxt-link>
@@ -494,7 +494,7 @@
 
 					<div class="col-lg-5">
 						<div class="order-summary">
-							<h3>ÜBERSICHT</h3>
+							<h3>MEINE AUSWAHL</h3>
 
 							<table class="table table-mini-cart">
 								<tbody v-if="cartList.length > 0">
@@ -505,7 +505,7 @@
                     <td>
                       <figure class="product-image-container">
                           <img
-                            :src="`${baseUrl}/dokumente/downloadDokument/${product.imageUuids[0]}`"
+                            :src="`${baseUrl}${product.imagePaths[0]}`"
                             :width="100"
                             :height="100"
                             alt="product"
@@ -515,13 +515,13 @@
 
                     <td class="product-col">
 											<h2 class="product-title">
-												{{product.name}} ×
-												<span class="product-qty">{{product.qty}}</span>
+												{{product.name}}
+												<!--span class="product-qty">{{product.qty}}</span-->
 											</h2>
 										</td>
 
 										<td class="price-col">
-											<span>${{product.price | priceFormat}}</span>
+											<!--span>${{product.price | priceFormat}}</span-->
 										</td>
 									</tr>
 								</tbody>
